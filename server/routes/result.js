@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 import { MongoClient } from "mongodb";
 import { DateTime } from "luxon";
-
+router.use(express.json());
 // Connection URL
 const url =
   "mongodb+srv://Maverick123:Arunesh123@cluster0.ufox0de.mongodb.net/?retryWrites=true&w=majority";
@@ -20,12 +20,10 @@ console.log("Connected to MongoDB");
 
 router.get("/", async (req, res) => {
   try {
-    const bankNames = req.body.bankNames;
-    const date = req.body.date;
-    console.log("bankNames:", bankNames);
-    console.log("bankNames type:", typeof bankNames);
-    console.log("date type", typeof bankNames);
-
+    const bankNames = JSON.parse(req.query.bankNames);
+    const date = req.query.date;
+    const dateStr = date;
+    findMaxInterestRateUntilDate(dateStr);
     async function findMaxInterestRateUntilDate(dateStr) {
       // Connect to MongoDB
       const client = await MongoClient.connect(
@@ -88,22 +86,25 @@ router.get("/", async (req, res) => {
           console.log("");
           final.push({
             bank_id: bankId,
-            "Maximum interest rate until": maxInterestRate,
+            maximuminterestrate: maxInterestRate,
             Maturity: maturity,
           });
         });
       }
+      final.sort((a, b) => b.maximuminterestrate - a.maximuminterestrate);
       res.send(final);
 
       // Close the MongoDB connection
       client.close();
+     
+      
+
     }
-  } catch (e) {
-    console.log(`this is the error in result${e}`);
+  }catch(e){
+    console.log(`the error in result is ${e}`);
   }
   // Usage example
-  const dateStr = date;
-  findMaxInterestRateUntilDate(dateStr);
+  
 });
 
 export { router as bankrouter };

@@ -19,10 +19,12 @@ client.connect((err) => {
   console.log('Connected to MongoDB');
 
 router.get('/', async (req, res) => {
-  const { bankNames, date } = req.body;
-  
-
-async function findMaxInterestRateUntilDate(dateStr) {
+ try{ 
+  const bankNames = JSON.parse(req.query.bankNames);
+  const date = req.query.date;
+  const dateStr = date;
+  findMaxInterestRateUntilDate(dateStr);
+  async function findMaxInterestRateUntilDate(dateStr) {
   // Connect to MongoDB
   const client = await MongoClient.connect('mongodb+srv://Maverick123:Arunesh123@cluster0.ufox0de.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -58,24 +60,32 @@ async function findMaxInterestRateUntilDate(dateStr) {
     const result = await collection.aggregate(pipeline).toArray();
       
     // Print the result
-    result.forEach(doc => {
+    result.forEach((doc) => {
       const bankId = doc._id;
       const maxInterestRate = doc.max_interest_rate;
-      const maturity = doc.maturity
-      console.log(`Bank ID: ${bankId}, Maximum Interest Rate until ${dateStr}: ${maxInterestRate} and maturity is ${maturity}`);
+      const maturity = doc.maturity;
+      console.log(
+        `Bank ID: ${bankId}, Maximum Interest Rate until ${dateStr}: ${maxInterestRate} and maturity is ${maturity}`
+      );
       console.log("");
-      final.push({"bank_id":bankId,"Maximum interest rate until":maxInterestRate,"Maturity":maturity});
+      final.push({
+        bank_id: bankId,
+        maximuminterestrate: maxInterestRate,
+        Maturity: maturity,
+      });
     });
   }
+  final.sort((a, b) => b.maximuminterestrate - a.maximuminterestrate);
   res.send(final);
 
   // Close the MongoDB connection
   client.close();
+}}catch(e){
+  console.log(`the error in result is ${e}`);
 }
 
 // Usage example
-const dateStr = date;
-findMaxInterestRateUntilDate(dateStr);
+
 
   });
 export {router as bankrouternew};

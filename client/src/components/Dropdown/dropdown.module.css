@@ -18,8 +18,16 @@
     align-items: center;
     justify-content: space-between;
     user-select: none;
+    
     color: rgba(90, 23, 83, 0.7);   
 }
+
+.dropdownTool input {
+    margin-top: -6px; 
+    vertical-align: middle;
+    margin-right: 5px;
+    /* Add more styles as needed */
+  }
 
 .dropdownMenu{
     /* position: absolute; */
@@ -51,27 +59,26 @@
 }
 
 .dropdownItem:hover{ 
-    /* background-color: #9fc3f870; */
+     background-color: #9fc3f870; 
 }
 
 .selected {
     position: relative;
   }
   
-.selected::after {
-    content: "";
+  .selected::after {
+    content: "\2713"; /* Unicode for checkmark symbol */
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
-    background-color: rgb(140, 177, 140);
-    border-radius: 50%;
+    font-size: 12px;
+    font-weight:bold;
+    color: rgb(37, 212, 37);
   }
-
+  
 .dropdownMenu {
-    max-height: 80px; /* Set the maximum height for the dropdown menu */
+    max-height: 170px; /* Set the maximum height for the dropdown menu */
     overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
   }
   

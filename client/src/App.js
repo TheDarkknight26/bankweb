@@ -5,6 +5,7 @@ import { useState } from 'react';
 import{BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Result from './components/result/results';
 
+
 function App() {
   const [final,setFinal] = useState({
     bankNames:[],
