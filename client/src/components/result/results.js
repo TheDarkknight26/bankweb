@@ -6,6 +6,7 @@ import styles from "./result.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useQuery } from "@tanstack/react-query";
+import Spinner from "../Spinner/Spinner.js";
 
 const Result = () => {
   const { final, setFinal } = useContext(finalContext);
@@ -63,7 +64,7 @@ const Result = () => {
   );
 
   if (bankDataQuery.isLoading || bankDataBetweenDatesQuery.isLoading) {
-    return <p>Loading...</p>;
+    return <Spinner/>;
   }
 
   if (bankDataQuery.isError || bankDataBetweenDatesQuery.isError) {

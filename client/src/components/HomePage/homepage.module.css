@@ -27,7 +27,7 @@
     max-width: 25%;
     /* height: 4.8rem; */
     font-size: 1.2rem;
-    padding: 1rem 0rem 1rem 3rem;
+    padding: 1rem 0rem 1rem 2rem;
     background: rgba(217, 217, 217, 0.4);
     border: none;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25);
@@ -81,3 +81,25 @@
     border-radius: 8px;
     margin-right: 15px;
 }
+
+/* ...existing styles... */
+
+.note {
+    background-color: rgb(230, 238, 117);
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 50%;
+    margin-left:0;
+    margin-right: auto;
+  }
+  
+  .noteText {
+    font-size: 16px; /* Increase the font size to make the text bigger */
+    color: black; /* Darken the text color for better visibility */
+    text-align:center;
+    
+  }
+  
+  
