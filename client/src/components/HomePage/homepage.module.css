@@ -27,7 +27,7 @@
     max-width: 25%;
     /* height: 4.8rem; */
     font-size: 1.2rem;
-    padding: 1rem 0rem 1rem 2rem;
+    padding: 1rem 0rem 0rem 0rem;
     background: rgba(217, 217, 217, 0.4);
     border: none;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25);
@@ -59,13 +59,14 @@
 .heading {
     width: 60%;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: bold;
     background: linear-gradient(90deg, #A2019C 0%, #E04CBE 50.38%, #B61C72 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 3rem;
+    margin-bottom:2px;
 }
 
 .submitBtn>button {
@@ -85,9 +86,9 @@
 /* ...existing styles... */
 
 .note {
-    background-color: rgb(230, 238, 117);
+    background-color: rgb(241, 247, 151);
     border: 1px solid #e0e0e0;
-    padding: 10px;
+    padding: 2px;
     border-radius: 4px;
     margin-top: 20px;
     width: 50%;
@@ -96,7 +97,7 @@
   }
   
   .noteText {
-    font-size: 16px; /* Increase the font size to make the text bigger */
+    font-size: 15px; /* Increase the font size to make the text bigger */
     color: black; /* Darken the text color for better visibility */
     text-align:center;
     

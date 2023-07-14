@@ -37,13 +37,13 @@
     /* width: 100%; */  
     overflow: auto;
     /* max-width: 100%; */
-    color: rgba(90, 23, 83, 0.5);   
+    color: rgba(90, 23, 83, 0.77);   
     /* background: rgba(217, 217, 217, 0.4); */
     /* box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .dropdownMenu:hover{
-    color: rgba(90, 23, 83, 0.8);   
+    color: rgba(90, 23, 83, 1);   
 
 }
 
