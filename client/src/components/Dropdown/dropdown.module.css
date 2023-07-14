@@ -78,7 +78,7 @@
   }
   
 .dropdownMenu {
-    max-height: 170px; /* Set the maximum height for the dropdown menu */
+    max-height: 150px; /* Set the maximum height for the dropdown menu */
     overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
   }
   

@@ -74,7 +74,7 @@ New Search
 </div>
 <br />
 <br />
-<h2>Maximum interest Rate until {formattedDate}</h2>
+<h2>Maximum Interest Rate among seleted Banks {formattedDate}</h2>
 <div className={styles.tableContainer}>
 <table className={styles.table}>
   <tr>
@@ -83,7 +83,7 @@ New Search
     <th>Maturity Period</th>
     <th>Book FD</th>
   </tr>
-  {listofbanks?.map((banks)=>{
+  {listofbanksbtw?.map((banks)=>{
     return(<tr>
     <td>{banks.bank_id}</td>
     <td>{banks.maximuminterestrate}</td>
@@ -96,7 +96,7 @@ New Search
 </div>
 <br />
 
-<h2>Normal interest Rate until {formattedDate}</h2>
+<h2>Discover the Highest Interest Rate until {formattedDate}</h2>
 <div className={styles.tableContainer}>
 <table className={styles.table}>
   <tr>
@@ -105,7 +105,7 @@ New Search
     <th>Maturity Period</th>
     <th>Book FD</th>
   </tr>
-  {listofbanksbtw?.map((banks)=>{
+  {listofbanks?.map((banks)=>{
     return(<tr>
     <td>{banks.bank_id}</td>
     <td>{banks.maximuminterestrate}</td>

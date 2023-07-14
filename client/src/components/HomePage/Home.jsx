@@ -76,7 +76,7 @@ const HomePage = () => {
     <form onSubmit={handleSubmit}>
         <div className={styles.main}>
             <div className={styles.title}>
-                Find the bank with maximum interest
+            Discover the Best Interest Rates for Your Fixed Deposits!
             </div>
             <Dropdown className={styles.selectBank} placeHolder="Choose Bank" options={options} />
               <span className={styles.heading}>Enter Maturity Period</span>
