@@ -4,6 +4,7 @@ import { finalContext } from './Contexts/finalContext';
 import { useState } from 'react';
 import{BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Result from './components/result/results';
+import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
 
 
 function App() {
@@ -11,8 +12,11 @@ function App() {
     bankNames:[],
     date:"",
 })
+
+const client = new QueryClient();
   return (
     <>
+    <QueryClientProvider client={client}>
     <finalContext.Provider value={{final,setFinal}}>
     <Router>
     <Routes>
@@ -21,6 +25,7 @@ function App() {
     </Routes>
     </Router>
     </finalContext.Provider>
+    </QueryClientProvider>
     </>
   );
 }

@@ -10,6 +10,13 @@
     background-size: cover;
 }
 
+.maturityDate {
+  font-size: 24px;
+  color: #383b3b;
+  margin-bottom: 10px;
+  
+}
+
 
 .NewSearchBtn{
     margin-top: 2rem;
