@@ -37,7 +37,7 @@
     width: 75%;
     margin: 0 auto; /* Centers the table horizontally */
     margin-left:0;
-    max-height: 250px; /* Adjust the maximum height as needed */
+    max-height: 350px; /* Adjust the maximum height as needed */
     overflow-y: auto;
     
   }

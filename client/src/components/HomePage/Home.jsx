@@ -20,7 +20,7 @@ const HomePage = () => {
     { value: "State Bank of India", label: "State Bank of India" },
     { value: "Indian Bank", label: "Indian Bank" },
     { value: "Central Bank of India", label: "Central Bank of India" },
-    { value: "Kotak Mahindra Bank", label: "Kotak Mahindra Bank" },
+    { value: "Kotak Bank", label: "Kotak Mahindra Bank" },
     { value: "ICICI Bank", label: "ICICI Bank" },
     { value: "Bank of Baroda", label: "Bank of Baroda" },
     { value: "Canara Bank", label: "Canara Bank" },
