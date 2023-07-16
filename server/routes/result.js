@@ -30,7 +30,7 @@ router.get("/", async (req, res) => {
     res.status(500).send({ error: "Internal Server Error" });
   } finally {
     // Close the MongoDB connection
-    client.close();
+    await client.close();
   }
 });
 

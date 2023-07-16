@@ -18,13 +18,35 @@ const HomePage = () => {
 
   const options = [
     { value: "State Bank of India", label: "State Bank of India" },
-    { value: "Kotak Bank", label: "Kotak Bank" },
+    { value: "Indian Bank", label: "Indian Bank" },
     { value: "Central Bank of India", label: "Central Bank of India" },
+    { value: "Kotak Mahindra Bank", label: "Kotak Mahindra Bank" },
     { value: "ICICI Bank", label: "ICICI Bank" },
-    { value:"Punjab National Bank",label:"Punjab National Bank"},
-    {value:"YES Bank" ,label:"Yes bank"},
-    {value:"Bank of baroda" ,label:"Bank of baroda"},
-];
+    { value: "Bank of Baroda", label: "Bank of Baroda" },
+    { value: "Canara Bank", label: "Canara Bank" },
+    { value: "Punjab National Bank", label: "Punjab National Bank" },
+    { value: "Union Bank of India", label: "Union Bank of India" },
+    { value: "IDBI Bank", label: "IDBI Bank" },
+    { value: "Bank of India", label: "Bank of India" },
+    { value: "Federal Bank", label: "Federal Bank" },
+    { value: "Bandhan Bank", label: "Bandhan Bank" },
+    { value: "Punjab and Sind Bank", label: "Punjab and Sind Bank" },
+    { value: "Bank of Maharashtra", label: "Bank of Maharashtra" },
+    { value: "Yes Bank", label: "Yes Bank" },
+    { value: "IndusInd Bank", label: "IndusInd Bank" },
+    { value: "Jammu Kashmir Bank", label: "Jammu Kashmir Bank" },
+    { value: "UCO Bank", label: "UCO Bank" },
+    { value: "Indian Overseas Bank", label: "Indian Overseas Bank" },
+    { value: "Karnataka Bank", label: "Karnataka Bank" },
+    { value: "RBL Bank", label: "RBL Bank" },
+    { value: "South Indian Bank", label: "South Indian Bank" },
+    { value: "Tamilnad Mercantile Bank", label: "Tamilnad Mercantile Bank" },
+    { value: "Karur Vyasa Bank", label: "Karur Vyasa Bank" },
+    { value: "Nainital Bank", label: "Nainital Bank" },
+    { value: "DCB Bank", label: "DCB Bank" },
+    { value: "CSB Bank", label: "CSB Bank" }
+  ];
+  
 
   useEffect(() => {
     const now = moment().tz('Asia/Kolkata');

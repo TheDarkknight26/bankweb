@@ -80,7 +80,7 @@ const Result = () => {
         New Search
       </div>
       <br />
-      <h2 className={styles.maturityDate}>Maturity Date: {formattedDate}</h2>
+      <h2 className={styles.maturityDate}><strong>Maturity Date:</strong> Based on the provided maturity period from today, the calculated maturity date is {formattedDate}</h2>
 
       <h2>Normal Interest Rate among selected Banks</h2>
       <div className={styles.tableContainer}>
