@@ -19,7 +19,6 @@ const HomePage = () => {
   const options = [
     { value: "State Bank of India", label: "State Bank of India" },
     { value: "Indian Bank", label: "Indian Bank" },
-    { value: "Central Bank of India", label: "Central Bank of India" },
     { value: "Kotak Bank", label: "Kotak Mahindra Bank" },
     { value: "ICICI Bank", label: "ICICI Bank" },
     { value: "Bank of Baroda", label: "Bank of Baroda" },
@@ -30,7 +29,7 @@ const HomePage = () => {
     { value: "Bank of India", label: "Bank of India" },
     { value: "Federal Bank", label: "Federal Bank" },
     { value: "Bandhan Bank", label: "Bandhan Bank" },
-    { value: "Punjab and Sind Bank", label: "Punjab and Sind Bank" },
+    { value: "Punjab and Sindh Bank", label: "Punjab and Sindh Bank" },
     { value: "Bank of Maharashtra", label: "Bank of Maharashtra" },
     { value: "Yes Bank", label: "Yes Bank" },
     { value: "IndusInd Bank", label: "IndusInd Bank" },
@@ -42,9 +41,11 @@ const HomePage = () => {
     { value: "South Indian Bank", label: "South Indian Bank" },
     { value: "Tamilnad Mercantile Bank", label: "Tamilnad Mercantile Bank" },
     { value: "Karur Vyasa Bank", label: "Karur Vyasa Bank" },
-    { value: "Nainital Bank", label: "Nainital Bank" },
+    { value:"City Union Bank",label:"City Union Bank"},
+    { value: "Nanital Bank", label: "Nainital Bank" },
     { value: "DCB Bank", label: "DCB Bank" },
-    { value: "CSB Bank", label: "CSB Bank" }
+    { value: "CSB Bank", label: "CSB Bank" },
+    {value:"IDFC Bank",label:"IDFC Bank"},
   ];
   
 
@@ -102,9 +103,7 @@ const HomePage = () => {
             <strong>Note:</strong> While we strive to provide updated and accurate data, please note that we cannot be held responsible for any discrepancies that may occur.
             </p>
           </div>
-          
-          
-        </div>
+          </div>
       </form>
     </>
   );

@@ -41,69 +41,64 @@ async function findMaxInterestRateUntilDate(dateStr, bankNames) {
   // Convert the date string to a Date object
   const dateS = new Date(dateStr);
 
-  const final = [];
-
-  // Iterate over bank names and find the maximum interest rate until the specified date
-  for (const bankName of bankNames) {
-    const pipeline = [
-      { $unwind: "$interest_rates" },
-      {
-        $match: {
-          bank: bankName,
-          "interest_rates.min":{ $lte: dateS },
-          "interest_rates.max":{$gte:dateS},
-
-        }
-      },
-      {
-        $group: {
-          _id: "$bank",
-          max_interest_rate: {
-            $max: { $toDouble: "$interest_rates.General Public" }
-          },
-          maturity_values: { $push: "$interest_rates.BeaMaturity" },
-          interest_rates: {
-            $push: { $toDouble: "$interest_rates.General Public" }
-          }
-        }
-      },
-      {
-        $project: {
-          max_interest_rate: 1,
-          maturity: {
-            $arrayElemAt: [
-              "$maturity_values",
-              {
-                $indexOfArray: [
-                  "$interest_rates",
-                  { $max: "$interest_rates" }
-                ]
-              }
-            ]
-          }
+  const pipeline = [
+    { $unwind: "$interest_rates" },
+    {
+      $match: {
+        bank: { $in: bankNames },
+        "interest_rates.min": { $lte: dateS },
+        "interest_rates.max": { $gte: dateS }
+      }
+    },
+    {
+      $group: {
+        _id: "$bank",
+        max_interest_rate: {
+          $max: { $toDouble: "$interest_rates.General Public" }
+        },
+        maturity_values: { $push: "$interest_rates.BeaMaturity" },
+        interest_rates: {
+          $push: { $toDouble: "$interest_rates.General Public" }
         }
       }
-    ];
+    },
+    {
+      $project: {
+        max_interest_rate: 1,
+        maturity: {
+          $arrayElemAt: [
+            "$maturity_values",
+            {
+              $indexOfArray: [
+                "$interest_rates",
+                { $max: "$interest_rates" }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ];
 
-    const result = await collection.aggregate(pipeline).toArray();
-    
-    // Print the result
-    result.forEach((doc) => {
-     
-      const bankId = doc._id;
-      const maxInterestRate = doc.max_interest_rate;
-      const maturity = doc.maturity;
-      console.log(
-        `Bank ID: ${bankId}, Maximum Interest Rate until ${dateStr}: ${maxInterestRate} and maturity is ${maturity} in resultbtw`
-      );
-      
-      final.push({
-        bank_id: bankId,
-        maximuminterestrate: maxInterestRate,
-        Maturity: maturity
-      });
+  const result = await collection.aggregate(pipeline).toArray();
+  const final = [];
+
+  // Print the result and add to the final array
+  result.forEach((doc) => {
+    const bankId = doc._id;
+    const maxInterestRate = doc.max_interest_rate;
+    const maturity = doc.maturity;
+    console.log(
+      `Bank ID: ${bankId}, Maximum Interest Rate until ${dateStr}: ${maxInterestRate} and maturity is ${maturity} in resultbtw`
+    );
+
+    final.push({
+      bank_id: bankId,
+      maximuminterestrate: maxInterestRate,
+      Maturity: maturity
     });
-  }
+  });
+
   final.sort((a, b) => b.maximuminterestrate - a.maximuminterestrate);
   return final;
 }

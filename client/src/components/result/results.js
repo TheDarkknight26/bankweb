@@ -41,9 +41,10 @@ const Result = () => {
   myMap.set("City Union Bank", "https://www.cityunionbank.com/deposit-interest-rate");
   myMap.set("Tamilnad Mercantile Bank", "https://www.tmb.in/deposit-interest-rates.aspx");
   myMap.set("Karur Vysya Bank", "https://www.kvb.co.in/interest-rates/resident-nro-deposits/");
-  myMap.set("Nainital Bank", "https://www.nainitalbank.co.in/English/interest_rate.aspx");
+  myMap.set("Nanital Bank", "https://www.nainitalbank.co.in/English/interest_rate.aspx");
   myMap.set("DCB Bank", "https://www.dcbbank.com/dcb-fixed-deposits/deposit-rates");
   myMap.set("CSB Bank", "https://www.csb.co.in/interest-rates");
+  myMap.set("IDFC Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates")
 
 
   const handleclick = (event) => {
@@ -114,6 +115,11 @@ const Result = () => {
       </div>
       <br />
       <h2 className={styles.maturityDate}><strong>Maturity Date:</strong> Based on the provided maturity period from today, the calculated maturity date is {formattedDate}</h2>
+      <div className={styles.note}>
+        <p className={styles.noteText}>
+          <strong>NOTE:</strong>If the banks you are looking for are not listed below, it is probably due to the reason that they are not included in our current dataset.
+        </p>
+      </div>
 
       <h2>Normal Interest Rate among selected Banks</h2>
       <div className={styles.tableContainer}>

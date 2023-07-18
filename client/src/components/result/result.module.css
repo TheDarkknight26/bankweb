@@ -42,6 +42,24 @@
     
   }
 
+  .note {
+    background-color: rgb(229, 236, 130);
+    border: 1px solid #e0e0e0;
+    padding: 3px;
+    border-radius: 2px;
+    margin-top: 10px;
+    width: 82%;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  
+  .noteText {
+    font-size: 15px;
+    color: #333;
+    text-align:left;
+    
+  }
+  
 
 
 .table {
