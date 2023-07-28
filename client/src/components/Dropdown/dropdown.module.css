@@ -1,25 +1,29 @@
+.combined{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  
+}
+
 .dropdownContainer {
     position: relative;
-    max-width: 25%;
-    /* height: 4.8rem; */
     font-size: 1.2rem;   
     padding: 1rem 0.8rem 1rem 2.5rem;
-    background: rgba(217, 217, 217, 0.4);
-    border: none;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25);
+    background: white;
+     border:1px solid black;
     border-radius: 8px;
     cursor: pointer;
+    width: 300px;
 }
 
 
 .dropdownInput {
-    padding: 0 5px;
+    padding: 2px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     user-select: none;
-    
-    color: rgba(90, 23, 83, 0.7);   
+    color: grey;   
 }
 
 .dropdownTool input {
@@ -32,54 +36,130 @@
 .dropdownMenu{
     /* position: absolute; */
     max-height: 8rem;
-    transform: translateY(1rem);
+    /* transform: translateY(1rem); */
     cursor: pointer;
     /* width: 100%; */  
     overflow: auto;
     /* max-width: 100%; */
-    color: rgba(90, 23, 83, 0.77);   
+    color: rgba(16, 10, 16, 0.77);   
     /* background: rgba(217, 217, 217, 0.4); */
     /* box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .dropdownMenu:hover{
-    color: rgba(90, 23, 83, 1);   
-
+    color: rgb(14, 12, 13);   
 }
 
-.dropdownItem{
-    padding: 1rem 0;
-    padding: 5px;
-    cursor: pointer;    
+.dropdownItem {
+  padding: 1rem 0;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Add this line to vertically center the items */
 }
-.dropdownItem.selected{
-    color: #fff !important;
-    cursor: pointer;
-    background-color: #0d6efd;
-}
+
 
 .dropdownItem:hover{ 
      background-color: #9fc3f870; 
 }
 
-.selected {
-    position: relative;
-  }
-  
-  .selected::after {
-    content: "\2713"; /* Unicode for checkmark symbol */
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
-    font-size: 12px;
-    font-weight:bold;
-    color: rgb(37, 212, 37);
-  }
-  
+.dropdownItem .optionLabel {
+  flex: 1;
+}
+ 
 .dropdownMenu {
     max-height: 150px; /* Set the maximum height for the dropdown menu */
     overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
   }
+
+  .selectAllCheckboxContainer {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    max-height:10px; /* Adjust the width as needed */
+  }
+  
+.selectAllCheckboxLabel {
+    position: absolute;
+    top: 430px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-family: Open sans;
+    font-style:inherit;
+  }
+  
+  .selectAllCheckbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff; /* Add this line to set the background color of the checkbox */
+  }
+  
+  .selectAllCheckbox::before {
+    content: "\2713"; /* Unicode for checkmark symbol */
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #010408; /* Color of the checkmark when checked */
+    text-align: center;
+    visibility: hidden; /* Hide the checkmark by default */
+  }
+  
+  .selectAllCheckbox:checked::before {
+    visibility: visible; /* Show the checkmark when checkbox is checked */
+  }
   
   
+  .selectAllCheckbox::-webkit-inner-spin-button,
+  .selectAllCheckbox::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+  }
+  
+
+.optionLabel {
+    display: flex;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+}
+
+.optionCheckbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    float: right;
+    
+}
+
+.optionCheckbox::before {
+    content: "\2713";
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #070607;
+    text-align: center;
+    visibility: hidden;
+    float: right;
+}
+
+.optionCheckbox:checked::before {
+    visibility: visible;
+    float: right;
+}

@@ -21,9 +21,12 @@ router.get("/", async (req, res) => {
   try {
     const bankNames = JSON.parse(req.query.bankNames);
     const date = req.query.date;
+    const mindate = req.query.mindate;
+    const maxdate = req.query.maxdate;
     const dateStr = date;
+    console.log(mindate,maxdate);
     await client.connect();
-    const result = await findMaxInterestRateUntilDate(dateStr, bankNames);
+    const result = await findMaxInterestRateUntilDate(mindate,maxdate,dateStr,bankNames);
     res.send(result);
   } catch (error) {
     console.log(`Error in fetching data in result: ${error}`);
@@ -34,22 +37,38 @@ router.get("/", async (req, res) => {
   }
 });
 
-async function findMaxInterestRateUntilDate(dateStr, bankNames) {
+async function findMaxInterestRateUntilDate(mindate,maxdate,dateStr, bankNames) {
   const db = client.db("FD_project");
   const collection = db.collection("interest_rate");
 
   // Convert the date string to a Date object
   const dateS = new Date(dateStr);
+  const minDate = new Date(mindate);
+  const maxDate = new Date(maxdate);
 
   const pipeline = [
     { $unwind: "$interest_rates" },
     {
       $match: {
         bank: { $in: bankNames },
-        "interest_rates.min": { $lte: dateS },
-        "interest_rates.max": { $gte: dateS }
+        $or: [
+          {
+            "interest_rates.min": { $gte: minDate },
+            "interest_rates.max": { $lte: maxDate }
+          },
+          {
+            "interest_rates.min": { $lte: maxDate },
+            "interest_rates.max": { $gte: maxDate }
+          },
+          {
+            "interest_rates.min": { $lte: minDate },
+            "interest_rates.max": { $gte: minDate }
+          }
+        ]
       }
     },
+    
+
     {
       $group: {
         _id: "$bank",
@@ -79,7 +98,6 @@ async function findMaxInterestRateUntilDate(dateStr, bankNames) {
       }
     }
   ];
-
   const result = await collection.aggregate(pipeline).toArray();
   const final = [];
 

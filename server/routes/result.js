@@ -46,7 +46,8 @@ async function findMaxInterestRateUntilDate(dateStr, bankNames) {
     {
       $match: {
         bank: { $in: bankNames },
-        "interest_rates.min": { $lte: dateS }
+        "interest_rates.min": { $lte: dateS },
+        "interest_rates.max": {$gte:dateS}
       }
     },
     {

@@ -12,12 +12,17 @@ function App() {
     bankNames:[],
     date:"",
 })
+const [flexmonth,setFlexmonth] = useState({
+  mindate:"",
+  maxdate:"",
+
+});
 
 const client = new QueryClient();
   return (
     <>
     <QueryClientProvider client={client}>
-    <finalContext.Provider value={{final,setFinal}}>
+    <finalContext.Provider value={{final,setFinal,flexmonth,setFlexmonth}}>
     <Router>
     <Routes>
     <Route path="/" element={<HomePage/>}/>

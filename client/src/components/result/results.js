@@ -9,7 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import Spinner from "../Spinner/Spinner.js";
 
 const Result = () => {
-  const { final, setFinal } = useContext(finalContext);
+  const { final, setFinal,flexmonth,setFlexmonth} = useContext(finalContext);
   const navigate = useNavigate();
   const [formattedDate, setFormattedDate] = useState("");
 
@@ -82,6 +82,8 @@ const Result = () => {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
+          mindate:JSON.stringify(flexmonth.mindate),
+          maxdate:JSON.stringify(flexmonth.maxdate),
         },
       });
       return response.data;
@@ -130,7 +132,7 @@ const Result = () => {
             <th>Maturity Period</th>
             <th>Book FD</th>
           </tr>
-          {listofbanksbtw.map((banks) => {
+          {listofbanks.map((banks) => {
             const bankURL = myMap.get(banks.bank_id);
             return (
               <tr>
@@ -158,7 +160,7 @@ const Result = () => {
             <th>Maturity Period</th>
             <th>Book FD</th>
           </tr>
-          {listofbanks.map((banks) => {
+          {listofbanksbtw.map((banks) => {
             const bankURL = myMap.get(banks.bank_id);
             return (
               <tr>

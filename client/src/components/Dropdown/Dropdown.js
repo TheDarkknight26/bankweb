@@ -15,28 +15,37 @@ const Dropdown = ({ placeHolder, options }) => {
   const { final, setFinal } = useContext(finalContext);
   const [showMenu, setShowMenu] = useState(false);
   const [value, setValue] = useState(null);
-  const [selectAll, setSelectAll] = useState(false);
+  const [selectAll, setSelectAll] = useState(false); // New state for tracking "Select All" status
 
-  useEffect(() => {
-    if (selectAll) {
-      const allValues = options.map((option) => option.value);
+  // ... (existing code)
+
+  const handleSelectAll = (e) => {
+    e.stopPropagation();
+    setSelectAll(!selectAll);
+
+    if (!selectAll) {
+      // Select all banks
+      const allBankValues = options.map((option) => option.value);
       setFinal((prevState) => ({
         ...prevState,
-        bankNames: allValues,
+        bankNames: allBankValues,
       }));
     } else {
+      // Deselect all banks
       setFinal((prevState) => ({
         ...prevState,
         bankNames: [],
       }));
     }
-  }, [selectAll]);
+  };
+
+  useEffect(() => {}, [final, setFinal]);
 
   const handleInputClick = (e) => {
     e.stopPropagation();
     setShowMenu(!showMenu);
+    console.log("click", showMenu);
   };
-
   const getDisplay = () => {
     if (value) {
       return value.label;
@@ -44,24 +53,29 @@ const Dropdown = ({ placeHolder, options }) => {
     return placeHolder;
   };
 
-  const onItemClick = (option) => {
-  const ifSelected = final.bankNames.includes(option.value);
-
-  if (selectAll) {
-    // "Select All" is checked, only handle individual deselection
-    if (ifSelected) {
-      const updatedBankNames = final.bankNames.filter(
-        (item) => item !== option.value
-      );
+  const handleItemClick = (value) => {
+    // Toggle the selection of the clicked item
+    const isItemSelected = final.bankNames.includes(value);
+    if (isItemSelected) {
+      const updatedBankNames = final.bankNames.filter((item) => item !== value);
       setFinal((prevState) => ({
         ...prevState,
         bankNames: updatedBankNames,
       }));
-    }
-  } else {
-    // Handle individual selection
-    setValue(option);
-    if (ifSelected) {
+    } else {
+      const newValue = value;
+      const updatedBankNames = [...final.bankNames, newValue];
+      setFinal((prevState) => ({
+        ...prevState,
+        bankNames: updatedBankNames,
+      }));
+    } // Since a specific option is clicked, "Select All" should be deselected
+  };
+
+  const handleOptionClick = (option) => {
+    // Toggle the selection of the clicked option
+    const isOptionSelected = final.bankNames.includes(option.value);
+    if (isOptionSelected) {
       const updatedBankNames = final.bankNames.filter(
         (item) => item !== option.value
       );
@@ -77,13 +91,6 @@ const Dropdown = ({ placeHolder, options }) => {
         bankNames: updatedBankNames,
       }));
     }
-  }
-};
-
-
-  const toggleSelectAll = (e) => {
-    e.stopPropagation();
-    setSelectAll(!selectAll);
   };
 
   const isSelected = (option) => {
@@ -92,37 +99,56 @@ const Dropdown = ({ placeHolder, options }) => {
   };
 
   return (
-    <div className={styles.dropdownContainer}>
-      <div className={styles.dropdownInput}>
-        <div className={styles.dropdownSelectedValue}>{getDisplay()}</div>
-        <div className={styles.dropdownTools}>
-          <div onClick={handleInputClick} className={styles.dropdownTool}>
-            <input
-              type="checkbox"
-              checked={selectAll}
-              readOnly
-              onClick={toggleSelectAll}
-            />
-            <Icon />
-          </div>
-          
-        </div>
-      </div>
-      {showMenu && (
-        <div className={styles.dropdownMenu}>
-          {options.map((option) => (
-            <div
-              onClick={() => onItemClick(option)}
-              key={option.value}
-              className={`dropdownItem ${
-                isSelected(option) ? styles.selected : ""
-              }`}
-            >
-              {option.label}
+    <div className={styles.combined}>
+      <div className={styles.dropdownContainer}>
+        <div onClick={handleInputClick} className={styles.dropdownInput}>
+          <div className={styles.dropdownSelectedValue}>{getDisplay()}</div>
+          <div className={styles.dropdownTools}>
+            <div className={styles.dropdownTool}>
+              <Icon />
             </div>
-          ))}
+          </div>
         </div>
-      )}
+        {showMenu && (
+          <div className={styles.dropdownMenu}>
+            {options.map((option) => (
+              <div key={option.value} className={styles.optionLabel}>
+                <label>
+                  <input
+                    type="checkbox"
+                    className={styles.optionCheckbox}
+                    checked={isSelected(option)}
+                    onChange={() => handleOptionClick(option)}
+                  />
+                 
+                </label>
+                <label>
+                  <div
+                    onClick={() => handleItemClick(option.value)}
+                    className={`dropdownItem ${
+                      isSelected(option) ? styles.selected : ""
+                    }`}
+                  >
+                    {option.label}
+                  </div>
+                </label>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className={styles.selectAllCheckboxContainer}>
+        <label className={styles.selectAllCheckboxLabel}>
+          Select All
+          <input
+            type="checkbox"
+            className={styles.selectAllCheckbox}
+            checked={selectAll}
+            onChange={handleSelectAll}
+          />
+        </label>
+      </div>
     </div>
   );
 };
