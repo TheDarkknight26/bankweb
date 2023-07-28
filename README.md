@@ -234,7 +234,7 @@ If you would like to contribute to the project, feel free to follow these steps:
 
 ## License
 
-This project is currently with MIT license. All rights reserved. See the LICENSE file for more information.
+This project is currently with MIT license. All rights reserved. See the [LICENSE](LICENSE) file for more information.
 
 ---
 
