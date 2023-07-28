@@ -1,4 +1,4 @@
-# FD RATE OPTIMIZER
+# BookFD
 
 ## Introduction
 **Maximize your Savings with the Best Interest Rates!**
