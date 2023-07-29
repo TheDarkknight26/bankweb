@@ -175,7 +175,7 @@ Here's an overview of the main directories and their purposes in your project:
 ```
 The project is structured into two main directories: `server` and `client`, representing the backend server and frontend application, respectively. Let's explain each directory's purpose:
 
-### Backend Directory (`backend/`):
+### Backend Directory (`server/`):
 
 - `models/`: This directory contains MongoDB schemas and models. It defines how data will be structured and stored in the database.
 
