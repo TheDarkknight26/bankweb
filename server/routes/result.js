@@ -56,7 +56,7 @@ async function findMaxInterestRateUntilDate(dateStr, bankNames) {
         max_interest_rate: {
           $max: { $toDouble: "$interest_rates.General Public" }
         },
-        maturity_values: { $push: "$interest_rates.BeaMaturity" },
+        maturity_values: { $push: "$interest_rates.Maturity" },
         interest_rates: {
           $push: { $toDouble: "$interest_rates.General Public" }
         }

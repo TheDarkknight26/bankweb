@@ -125,16 +125,16 @@ const HomePage = () => {
           <div className={styles.title}>
             Discover the Best Interest Rates for Your Fixed Deposits!
           </div>
-          <div className={styles.whatWeDo}>
-            <h2 className={styles.whatWeDoHeading}>What We Do ?</h2>
-            <p className={styles.whatWeDoContent}>
+          <div className={styles.whatWeDoi}>
+            <div className={styles.whatWeDo}>What We Do ?</div>
+            <div className={styles.whatWeDoContent}>
              We empower you to optimize your financial growth effortlessly. Our website allows you to leverage your funds wisely, making the most of your investments. Simply input your maturity date, desired flexibility, and preferred banks, and let our smart algorithm do the rest. Discover the highest interest rates available within your chosen period, enabling you to make informed decisions and maximize your returns.
-            </p>
+            </div>
           </div>
           <Dropdown className={styles.selectBank} placeHolder="Choose Bank" options={options} />
           <div className={styles.combined}>
           <span className={styles.heading}>Enter Maturity Period</span>
-          <span className={styles.heading}>Flexibility</span>
+          <span className={styles.heading2}>Flexibility</span>
           <InfoIcon /> 
           </div>
           <div className={styles.combined2}>
@@ -144,17 +144,20 @@ const HomePage = () => {
             <input placeholder="Days" onChange={handleday} value={day} className={`${styles.selectDays} ${styles.right}`} />
             </div>
             <div className={styles.selectflexcontainer}>
-              <input placeholder="Months" value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
+              <input placeholder="Months"  id="inputField" value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
             </div>
           </div>
           <div className={styles.submitBtn}>
           <button type="submit" >Show Result</button>
             </div>
-         {/* <div className={styles.note}>
+         <div className={styles.note}>
             <p className={styles.noteText}>
-            <strong>Note:</strong> While we strive to provide updated and accurate data, please note that we cannot be held responsible for any discrepancies that may occur.
+            <strong>
+              Disclaimer:  
+              </strong> 
+              Information provided on our website is for informational purposes only and based on publicly available data. We strive for accuracy, but we cannot guarantee its completeness. Always verify data before making financial decisions. We are not liable for errors or inaccuracies. Use the platform at your own discretion.
             </p>
-          </div> */}
+          </div>
           </div>
       </form>
     </>

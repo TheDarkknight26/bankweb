@@ -2,14 +2,23 @@
     display: flex;
     height: 90vh;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 0rem;
     margin-left: 2rem;
     font-family: 'Poppins', sans-serif;
     background: url(../../../public/assets/house.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
+}
+
+.disclaimer{
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+ 
+  margin-left: -5px;
+  padding: 8px;
 }
 
 .title {
@@ -101,7 +110,7 @@ input {
 .heading {
     width: 60%;
     font-size: 2rem;
-    font-weight: bold;
+    
     background:black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -113,19 +122,34 @@ input {
 }
 
 
+.heading2 {
+  width: 60%;
+  font-size: 2rem;
+  background:black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 3rem;
+  margin-bottom:2px;
+  margin-right:3px;
+}
+
+
 
 
 .submitBtn>button {
     margin-top: 2rem;
     cursor: pointer;
-    color: white;
+    color: blue;
     font-size: 1.2rem;
     font-weight: 400;
     padding: 10px 20px;
     border: none;
-    background: black;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 4px;
+    border-color: blue;
     margin-right: 15px;
 }
 
@@ -139,40 +163,31 @@ input {
 
 }
 
-.whatWeDo h2 {
+.whatWeDo{
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
   background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 20px;
 }
 
-.whatWeDo p {
+.whatWeDoContent {
+   width: 50%;
     font-size: 1rem;
     line-height: 1;
-    color: #120e0e;
-    margin-left:-5px;
+    color: black;
+    margin-bottom: 30px;
+    margin-left:3px;
     font-family: Open Sans;
-   
     background-color: white;
     padding: 1rem;
-    
-    border: 1px solid #e0e0e0;
+    border: 1px solid #2b2424;
+    border-radius: 8px;
 }
 
 /* Adjust the styles for the title and description within the "main" div */
-.title {
-  width: 60%;
-  font-size: 3rem;
-  font-weight: 600;
-  background: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
- 
-}
 
 .description {
   font-size: 1.4rem;
@@ -184,22 +199,24 @@ input {
 /* ...existing styles... */
 
 .note {
-    background-color: rgb(255, 255, 253);
-    border: 1px solid #e0e0e0;
-    padding: 2px;
-    border-radius: 4px;
-    font-family: Open sans;
-    margin-top: 30px;
-    width: 50%;
-    margin-left:0;
-    margin-right: auto;
-    margin-bottom: 15px;
+  width: 70%;
+  font-size: 1rem;
+  line-height: 1;
+  color: black;
+  margin-bottom: 30px;
+  margin-left:-2px;
+  font-family: Open Sans;
+  background-color: rgb(239, 239, 111);
+  padding: 5px;
+  border: 1px solid #2b2424;
+  border-radius: 8px;
+  margin-top: 20px;
   }
   
   .noteText {
     font-size: 15px; /* Increase the font size to make the text bigger */
     color: black; /* Darken the text color for better visibility */
-    text-align:center;
+    text-align:left;
     
   }
   
@@ -228,7 +245,7 @@ input {
     padding: 4px 8px;
     background-color: white;
     color: #131010;
-    font-size: 15px;
+    font-size: 14px;
     font-family: Open sans;
     border-radius: 4px;
     width: 400px;
