@@ -80,8 +80,8 @@
   }
   
 .selectAllCheckboxLabel {
-    position: absolute;
-    top: 350px;
+    position: relative;
+    top: 0px;
     display: flex;
     align-items: center;
     margin-left: 10px;
