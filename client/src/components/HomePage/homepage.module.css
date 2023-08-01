@@ -6,6 +6,7 @@
     margin-left: 2rem;
     font-family: 'Poppins', sans-serif;
     background-repeat: no-repeat;
+    
     background-position: right;
     background-size: contain;
     margin-bottom: 180px;
@@ -177,16 +178,19 @@ input {
    margin-top: 40px;
 }
 
+
+
 .whatWeDoContent {
    width: 50%;
     font-size: 1rem;
     line-height: 1;
-    color: black;
+    color: rgb(71, 67, 67);
     margin-bottom: 30px;
     margin-left:-8px;
-    font-family: Open Sans;
+    font-family: 'Red Hat family';
     background-color: white;
     padding: 1rem;
+    
     /* border: 1px solid #2b2424; */
     border-radius: 8px;
 }
