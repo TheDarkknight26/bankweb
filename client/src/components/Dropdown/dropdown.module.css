@@ -10,7 +10,7 @@
     font-size: 1rem;   
     padding: 0.5rem 0.8rem 0.5rem 1.5rem;
     background: white;
-     border:1px solid black;
+    border:1px solid grey;
     border-radius: 8px;
     cursor: pointer;
     width: 300px;
@@ -78,6 +78,15 @@
     width: 150px;
     max-height:10px; /* Adjust the width as needed */
   }
+
+  .selectAllCheckboxContainerdown{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin-top:-200px;
+    
+
+  }
   
 .selectAllCheckboxLabel {
     position: relative;
@@ -89,7 +98,7 @@
     user-select: none;
     font-family: Open sans;
     font-style:inherit;
-    color: rgb(20, 19, 19);
+    color: rgb(25, 23, 23);
   }
   
   .selectAllCheckbox {
@@ -102,7 +111,7 @@
     margin-right: 8px;
     outline: none;
     cursor: pointer;
-    background-color: #fff; /* Add this line to set the background color of the checkbox */
+    background-color: #fffefe; 
   }
   
   .selectAllCheckbox::before {
@@ -114,10 +123,8 @@
     color: #010408; /* Color of the checkmark when checked */
     text-align: center;
     visibility: hidden; /* Hide the checkmark by default */
-    margin-right: 8px;
-    
   }
-  
+ 
   .selectAllCheckbox:checked::before {
     visibility: visible; /* Show the checkmark when checkbox is checked */
   }

@@ -22,7 +22,6 @@ const Dropdown = ({ placeHolder, options }) => {
   const handleSelectAll = (e) => {
     e.stopPropagation();
     setSelectAll(!selectAll);
-
     if (!selectAll) {
       // Select all banks
       const allBankValues = options.map((option) => option.value);
@@ -39,7 +38,13 @@ const Dropdown = ({ placeHolder, options }) => {
     }
   };
 
-  useEffect(() => {}, [final, setFinal]);
+  useEffect(() => {
+    // When the menu is shown, update the selectAll state based on the selected items
+    if (showMenu) {
+      setSelectAll(final.bankNames.length === options.length);
+    }
+  }, [showMenu, final.bankNames, options.length]);
+
 
   const handleInputClick = (e) => {
     e.stopPropagation();
@@ -138,17 +143,32 @@ const Dropdown = ({ placeHolder, options }) => {
         )}
       </div>
 
-      <div className={styles.selectAllCheckboxContainer}>
-        <label className={styles.selectAllCheckboxLabel}>
-          Select All
-          <input
-            type="checkbox"
-            className={styles.selectAllCheckbox}
-            checked={selectAll}
-            onChange={handleSelectAll}
-          />
-        </label>
-      </div>
+      {showMenu ? (
+        <div className={styles.selectAllCheckboxContainerdown}>
+          <label className={styles.selectAllCheckboxLabel}>
+            Select All
+            <input
+              type="checkbox"
+              className={styles.selectAllCheckbox}
+              checked={selectAll}
+              onChange={handleSelectAll}
+            />
+          </label>
+        </div>
+      ) : (
+        <div className={styles.selectAllCheckboxContainer}>
+          <label className={styles.selectAllCheckboxLabel}>
+            Select All
+            <input
+              type="checkbox"
+              className={styles.selectAllCheckbox}
+              checked={selectAll}
+              onChange={handleSelectAll}
+            />
+          </label>
+        </div>
+      )}
+
     </div>
   );
 };
