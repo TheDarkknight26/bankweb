@@ -6,9 +6,11 @@
     margin-left: 2rem;
     font-family: 'Poppins', sans-serif;
     background-repeat: no-repeat;
-    
-    background-position: right;
-    background-size: contain;
+    background: url('../../../public/assets/piggy\ bank.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50%; 
+   
     margin-bottom: 180px;
 }
 
