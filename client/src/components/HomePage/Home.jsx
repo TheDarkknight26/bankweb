@@ -133,8 +133,8 @@ const HomePage = () => {
           </div>
           <Dropdown className={styles.selectBank} placeHolder="Choose Bank" options={options} />
           <div className={styles.combined}>
-          <span className={styles.heading}>Enter Maturity Period</span>
-          <span className={styles.heading2}>Flexibility</span>
+          <div className={styles.heading}>Enter Maturity Period</div>
+          <div className={styles.heading2}>Flexibility</div>
           </div>
           <div className={styles.combined2}>
             <div>

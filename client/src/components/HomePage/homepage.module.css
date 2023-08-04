@@ -123,9 +123,15 @@ input {
 }
 
 .heading2{
+  width:100%;
+  background:black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   margin-top: 3.7rem;
-  margin-right:49rem;
+  margin-right:33.5rem;
 }
 
 
