@@ -135,7 +135,6 @@ const HomePage = () => {
           <div className={styles.combined}>
           <span className={styles.heading}>Enter Maturity Period</span>
           <span className={styles.heading2}>Flexibility</span>
-          <InfoIcon /> 
           </div>
           <div className={styles.combined2}>
             <div>
@@ -145,6 +144,7 @@ const HomePage = () => {
             </div>
             <div className={styles.selectflexcontainer}>
               <input placeholder="Months"  id="inputField" value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
+              <div className={styles.infoicon}> <InfoIcon /> </div>
             </div>
           </div>
           <div className={styles.submitBtn}>

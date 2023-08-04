@@ -1,75 +1,71 @@
 .main {
-    display: flex;
-    height: 90vh;
-    flex-direction: column;
-    margin-top: 0rem;
-    margin-left: 2rem;
-    font-family: 'Poppins', sans-serif;
-    background-repeat: no-repeat;
-    background: url('../../../public/assets/piggy\ bank.jpg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 50%; 
-   
-    margin-bottom: 180px;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-repeat: no-repeat;
+  background: url('../../../public/assets/piggy\ bank.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 50%;
+  margin-bottom: 11.25em; /* Adjusted to use em */
 }
 
-.disclaimer{
+.disclaimer {
   text-align: left;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 600;
-  margin-left: -5px;
-  padding: 8px;
+  margin-left: -0.3125em;
+  padding: 0.5em;
 }
 
 .title {
-    width: 60%;
-    font-size: 3rem;
-    font-weight: 400;
-    background: black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
+  width: 60%;
+  font-size: 3em; /* Adjusted to use em */
+  font-weight: 400;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .selectBank {
-    max-width: 65%;
-     height: 0.8rem; 
-    font-size: 1.2rem;
-    padding: 1rem 0rem 0rem 0rem;
-    background: rgba(8, 8, 8, 0.4);
-    border: none;
-    /* box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -1px 4px rgba(0, 0, 0, 0.25); */
-    border-radius: 8px;
+  max-width: 4.0625em; /* Adjusted to use em */
+  height: 0.8em;
+  font-size: 1.2em;
+  padding: 1em 0 0 0;
+  background: rgba(8, 8, 8, 0.4);
+  border: none;
+  border-radius: 0.5em;
 }
 
 .selectDays {
-    max-width: 15.5%;
-    height: 0.8rem; 
-    font-size: 1rem;
-    padding: 1rem;
-    border: 1px solid #000;
-    border-color: grey;
+  max-width: 3.5rem; /* Adjusted to use em */
+  height: 0.8em;
+  font-size: 1em; /* Adjusted to use em */
+  padding: 1em;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-top: 3.125em; /* Adjusted to use em */
 }
-    
-   
 
 .left {
-    border-radius: 8px 0 0 8px;
+  border-radius: 0.5em 0 0 0.5em;
 }
 
 .mid {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .right {
-    border-radius: 0 8px 8px 0;
+  border-radius: 0 0.5em 0.5em 0;
 }
 
-.flexmonth{
-border-radius:8px 8px 8px 8px;
+.flexmonth {
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
 input {
@@ -77,36 +73,38 @@ input {
   padding: 0;
 }
 
-.selectflex{
-    margin-top: 0px;
-    max-width: 23%;
-    height: 1rem; 
-    font-size: 1rem;
-    padding: 0.8rem;
-    background:white;
-    border: 1px solid #000;
-   border-color: grey;
-    margin-right:165px;
-    align-items: center;
+.selectflex {
+  margin-top: 0;
+  max-width: 4.5rem; /* Adjusted to use em */
+  height: 1em;
+  font-size: 1em;
+  padding: 0.8em;
+  background: white;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-right: 10.3125em; /* Adjusted to use em */
+  align-items: center;
+  margin-top: 3.125em; /* Adjusted to use em */
+  margin-left: 5em; /* Adjusted to use em */
 }
-
 
 .selectflexcontainer {
     /* Apply right margin to push the .selectflex input to the left */
-    margin-right: 170px;
+    display: flex;
+  
   }
 
 
 
 .combined{
     display: flex;
-    margin-top:-20px;
+    margin-top:1.253em;
 }
 
 .combined2{
     display:flex;
-    max-width: 900px;
-    margin-top: -40px;
+    margin-top: -2.5rem;
+    justify-content: flex-start;
 }
 
 .heading {
@@ -125,7 +123,7 @@ input {
 .heading2{
   font-size: 1.5rem;
   margin-top: 3.7rem;
-  margin-right:40px;
+  margin-right:49rem;
 }
 
 
@@ -183,7 +181,7 @@ input {
 
 
 .whatWeDoContent {
-   width: 50%;
+    width: 50%;
     font-size: 1rem;
     line-height: 1;
     color: rgb(71, 67, 67);
@@ -230,13 +228,16 @@ input {
     
   }
   
-  
+  .infoicon{
+    margin-top: 3.75rem;
+    margin-right: 3.125rem;
+    margin-left: -9.375rem;
+  }
   .infoIcon {
-    position: relative;
     cursor: pointer;
-    margin-top:105px;
-    margin-right: 730px;
-    margin-bottom:10px; /* Add margin to separate the info icon from the option label */
+    margin-top:0 px;
+    margin-right: 700px;
+    /* Add margin to separate the info icon from the option label */
   }
   
   /* Styles for the icon content */
@@ -247,8 +248,8 @@ input {
   /* Styles for the tooltip */
   .tooltip {
     position: absolute;
-    top: calc(100% + 7px); /* Position the tooltip below the info icon */
-    left: 50%;
+    top: calc(45%+ 7px); /* Position the tooltip below the info icon */
+    left: 31.65rem;
     border: 1px solid #e0e0e0;
     transform: translateX(0%);
     display: none; /* Hide the tooltip by default */
