@@ -3,8 +3,8 @@
   height: 90vh;
   flex-direction: column;
   margin-top: 0;
-  margin-left: 2rem;
-  font-family: 'Poppins';
+  margin-left: 4rem;
+  font-family: 'Poppins',sans-serif;
   background-repeat: no-repeat;
   background: url('../../../public/assets/piggy\ bank.jpg');
   background-repeat: no-repeat;
@@ -17,8 +17,10 @@
   text-align: left;
   font-size: 1.5em;
   font-weight: 600;
+  font-family: 'Poppins',sans-serif;
   margin-left: -0.3125em;
   padding: 0.5em;
+
 }
 
 .title {
@@ -30,6 +32,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 80%;
 }
 
 .selectBank {
@@ -43,10 +46,10 @@
 }
 
 .selectDays {
-  max-width: 3.5rem; /* Adjusted to use em */
+  max-width: 2.5rem; /* Adjusted to use em */
   height: 0.8em;
-  font-size: 1em; /* Adjusted to use em */
-  padding: 1em;
+  font-size: 1rem; /* Adjusted to use em */
+  padding: 1rem;
   border: 1px solid #000;
   border-color: grey;
   margin-top: 3.125em; /* Adjusted to use em */
@@ -131,7 +134,7 @@ input {
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   margin-top: 3.7rem;
-  margin-right:33.5rem;
+  margin-right:37.5rem;
 }
 
 
@@ -156,14 +159,14 @@ input {
   margin-top: 2rem;
   cursor: pointer;
   color: white;
-  background-color:#3269CF;
+  background-color:rgb(11, 181, 248);
   font-size: 1rem;
   font-weight: 400;
   padding: 10px ;
   border: none;
   border: 1px solid #000;
   border-radius: 4px;
-  border-color:#3269CF;
+  border-color:rgb(11, 181, 248);
   margin-right: 15px;
 }
 
@@ -174,6 +177,7 @@ input {
   border-radius: 8px;
   max-width: 50%;
   margin-bottom:15px;
+  opacity:80%;
 
 }
 
@@ -195,9 +199,10 @@ input {
     color: rgb(71, 67, 67);
     margin-bottom: 30px;
     margin-left:-8px;
-    font-family: 'Red Hat family';
+    font-family: 'Poppins',sans-serif;
     background-color: white;
     padding: 1rem;
+    line-height: 1.2;
     
     /* border: 1px solid #2b2424; */
     border-radius: 8px;
@@ -233,8 +238,9 @@ input {
     font-size: 15px; /* Increase the font size to make the text bigger */
     color: black; /* Darken the text color for better visibility */
     text-align:left;
-    
-  }
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.2;
+}
   
   .infoicon{
     margin-top: 3.75rem;
