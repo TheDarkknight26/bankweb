@@ -45,42 +45,61 @@
   border-radius: 0.5em;
 }
 
-.selectDay{
-flex-basis:60%;
-}
-.selectflexcontainer{
-  flex-basis:35%;
-}
 
-.infoicon{
-  flex-basis:5%;
-}
-
-
-.selectDays {
+.left {
+  flex-basis:10%;
   flex-wrap: nowrap;
-  max-width: 15%; /* Adjusted to use em */
+  min-width: 5%;
+  max-width: 10%;
   height: 0.8em;
-  font-size: 1rem; /* Adjusted to use em */
+  font-size: 1rem; 
   padding: 1rem;
   border: 1px solid #000;
   border-color: grey;
-  margin-top: 3.125em; /* Adjusted to use em */
-}
-
-.left {
+  margin-top: 3.125em; 
   border-radius: 0.5em 0 0 0.5em;
 }
 
 .mid {
+  flex-wrap: nowrap;
+  max-width: 10%;
+  height: 0.8em;
+  font-size: 1rem; 
+  padding: 1rem;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-top: 3.125em; 
   border-radius: 0;
 }
 
 .right {
+  flex-wrap: nowrap;
+  max-width: 10%;
+  height: 0.8em;
+  font-size: 1rem; 
+  padding: 1rem;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-top: 3.125em; 
   border-radius: 0 0.5em 0.5em 0;
+  margin-right:8%;
 }
 
 .flexmonth {
+  flex-basis: 20%;
+  flex-wrap: nowrap;
+  margin-top: 0;
+  max-width:10%; 
+  min-width:5%;
+  height: 1em;
+  font-size: 1em;
+  padding: 0.8em;
+  background: white;
+  border: 1px solid #000;
+  border-color: grey;
+  align-items: center;
+  margin-top: 3.125em; 
+  margin-right:2%;
   border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
@@ -88,22 +107,6 @@ input {
   margin: 0;
   padding: 0;
 }
-
-.selectflex {
-  margin-top: 0;
-  max-width:4rem; 
-  height: 1em;
-  font-size: 1em;
-  padding: 0.8em;
-  background: white;
-  border: 1px solid #000;
-  border-color: grey;
-  margin-right: 10.3125em; 
-  align-items: center;
-  margin-top: 3.125em; 
-  margin-left: 5em; 
-}
-
 
 
 .dropdown{
@@ -115,11 +118,12 @@ input {
 .combined{
     background-color: red; 
     display: flex;
+    flex-direction:row;
     margin-top:1.253em;
     width:50%;
     height:5rem;
-    justify-content: flex-start;
-    align-items: space-between;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -129,26 +133,26 @@ input {
     background-color: orange;
     margin-top: 2.5rem;
     width: 50%;
-    justify-content: flex-start;
-    align-items: space-between;
+    justify-content:space-between;
+    align-items:center;
   
 }
 
 .heading {
-    flex-basis: 80%;
+    /* flex-basis: 10%;
     font-size: 1.5rem;
     background:black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 3.7rem;
-    margin-right:3px;
+     margin-top: 3.7rem;
+     margin-right:100%;  */
    
 }
 
 .heading2{
-  flex-basis: 20%;
+   /* flex-basis: 20%;
   background:black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -156,7 +160,7 @@ input {
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   margin-top: 3.7rem;
-  margin-right:37.5rem;
+  margin-right:50%; */
 }
 
 
