@@ -45,8 +45,21 @@
   border-radius: 0.5em;
 }
 
+.selectDay{
+flex-basis:60%;
+}
+.selectflexcontainer{
+  flex-basis:35%;
+}
+
+.infoicon{
+  flex-basis:5%;
+}
+
+
 .selectDays {
-  max-width: 2.5rem; /* Adjusted to use em */
+  flex-wrap: nowrap;
+  max-width: 15%; /* Adjusted to use em */
   height: 0.8em;
   font-size: 1rem; /* Adjusted to use em */
   padding: 1rem;
@@ -78,42 +91,51 @@ input {
 
 .selectflex {
   margin-top: 0;
-  max-width: 4.5rem; /* Adjusted to use em */
+  max-width:4rem; 
   height: 1em;
   font-size: 1em;
   padding: 0.8em;
   background: white;
   border: 1px solid #000;
   border-color: grey;
-  margin-right: 10.3125em; /* Adjusted to use em */
+  margin-right: 10.3125em; 
   align-items: center;
-  margin-top: 3.125em; /* Adjusted to use em */
-  margin-left: 5em; /* Adjusted to use em */
+  margin-top: 3.125em; 
+  margin-left: 5em; 
 }
 
-.selectflexcontainer {
-    /* Apply right margin to push the .selectflex input to the left */
-    display: flex;
-  
-  }
 
 
+.dropdown{
+  background-color: blue;
+  display: flex;
+  width:50%
+}
 
 .combined{
+    background-color: red; 
     display: flex;
     margin-top:1.253em;
-    margin-top:-2.5rem;
+    width:50%;
+    height:5rem;
     justify-content: flex-start;
+    align-items: space-between;
+    
 }
 
 .combined2{
     display:flex;
-    margin-top: -2.5rem;
+    flex-direction: row;
+    background-color: orange;
+    margin-top: 2.5rem;
+    width: 50%;
     justify-content: flex-start;
+    align-items: space-between;
+  
 }
 
 .heading {
-    width: 100%;
+    flex-basis: 80%;
     font-size: 1.5rem;
     background:black;
     -webkit-background-clip: text;
@@ -126,7 +148,7 @@ input {
 }
 
 .heading2{
-  width:100%;
+  flex-basis: 20%;
   background:black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,7 +193,6 @@ input {
 }
 
 .whatWeDo {
- 
   margin-left:5px;
   background-color:white;
   border-radius: 8px;
@@ -242,15 +263,11 @@ input {
     line-height: 1.2;
 }
   
-  .infoicon{
-    margin-top: 3.75rem;
-    margin-right: 3.125rem;
-    margin-left: -9.375rem;
-  }
+
   .infoIcon {
     cursor: pointer;
-    margin-top:0 px;
-    margin-right: 700px;
+    /* margin-top:0 px;
+    margin-right: 700px; */
     /* Add margin to separate the info icon from the option label */
   }
   

@@ -56,7 +56,7 @@ const HomePage = () => {
   
   const InfoIcon = () => {
     return (
-      <div className={styles.infoIcon}>
+      <div className={`${styles.infoIcon} ${styles.combined2}`}>
      <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}} />
       <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it. This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
     </div>
@@ -131,7 +131,9 @@ const HomePage = () => {
              We empower you to optimize your financial growth effortlessly. Our website allows you to leverage your funds wisely, making the most of your investments. Simply input your maturity date, desired flexibility, and preferred banks, and let our smart algorithm do the rest. Discover the highest interest rates available within your chosen period, enabling you to make informed decisions and maximize your returns.
             </div>
           </div>
+          <div className={styles.dropdown}>
           <Dropdown className={styles.selectBank} placeHolder="Choose Bank" options={options} />
+          </div>
           <div className={styles.combined}>
           <div className={styles.heading}>Enter Maturity Period</div>
           <div className={styles.heading2}>Flexibility</div>
@@ -141,15 +143,13 @@ const HomePage = () => {
             <input placeholder="Years" value={year} onChange={handleyear} className={`${styles.selectDays} ${styles.left}`} />
             <input placeholder="Months" value={month} onChange={handlemonth} className={`${styles.selectDays} ${styles.mid}`} />
             <input placeholder="Days" onChange={handleday} value={day} className={`${styles.selectDays} ${styles.right}`} />
+            <input placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.combined2}${styles.selectflex} ${styles.flexmonth}`}/>
+            <InfoIcon/>
             </div>
-            <div className={styles.selectflexcontainer}>
-              <input placeholder="Months"  id="inputField" value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
-              <div className={styles.infoicon}> <InfoIcon /> </div>
-            </div>
-          </div>
+           </div>
           <div className={styles.submitBtn}>
           <button type="submit" >Show Result</button>
-            </div>
+          </div>
          <div className={styles.note}>
             <p className={styles.noteText}>
             <strong>
