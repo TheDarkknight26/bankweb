@@ -144,6 +144,7 @@ const HomePage = () => {
             <input placeholder="Months" value={month} onChange={handlemonth} className={` ${styles.mid}`} />
             <input placeholder="Days" onChange={handleday} value={day} className={`${styles.right}`} />
             <input placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
+            
             <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}} className={styles.infoIcon}/>
             <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it. This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
             </div>
