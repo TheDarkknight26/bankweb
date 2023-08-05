@@ -135,16 +135,14 @@ const HomePage = () => {
           <Dropdown className={styles.selectBank} placeHolder="Choose Bank" options={options} />
           </div>
           <div className={styles.combined}>
-          <div>
-          <div className={styles.heading}>Enter Maturity Period</div>
-          <div className={styles.heading2}>Flexibility</div>
-          </div>
+          <span className={styles.heading}>Enter Maturity Period</span>
+          <span className={`${styles.heading2}`}>Flexibility</span>
           </div>
           <div className={styles.combined2}>
             <div>
-            <input placeholder="Years" value={year} onChange={handleyear} className={`${styles.selectDays} ${styles.left}`} />
-            <input placeholder="Months" value={month} onChange={handlemonth} className={`${styles.selectDays} ${styles.mid}`} />
-            <input placeholder="Days" onChange={handleday} value={day} className={`${styles.selectDays} ${styles.right}`} />
+            <input placeholder="Years" value={year} onChange={handleyear} className={`${styles.left}`} />
+            <input placeholder="Months" value={month} onChange={handlemonth} className={` ${styles.mid}`} />
+            <input placeholder="Days" onChange={handleday} value={day} className={`${styles.right}`} />
             <input placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
             <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}} />
             <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it. This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
