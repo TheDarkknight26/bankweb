@@ -56,8 +56,9 @@
   padding: 1rem;
   border: 1px solid #000;
   border-color: grey;
-  margin-top: 3.125em; 
+  margin-top: 1.125em; 
   border-radius: 0.5em 0 0 0.5em;
+  min-width: 20px;
 }
 
 .mid {
@@ -68,8 +69,9 @@
   padding: 1rem;
   border: 1px solid #000;
   border-color: grey;
-  margin-top: 3.125em; 
+  margin-top: 1.125em; 
   border-radius: 0;
+  min-width: 20px;
 }
 
 .right {
@@ -80,17 +82,19 @@
   padding: 1rem;
   border: 1px solid #000;
   border-color: grey;
-  margin-top: 3.125em; 
+  margin-top: 1.125em; 
   border-radius: 0 0.5em 0.5em 0;
   margin-right:8%;
+  min-width: 20px;
 }
 
 .flexmonth {
   flex-basis: 20%;
   flex-wrap: nowrap;
+  flex-shrink: 0.2;
   margin-top: 0;
   max-width:10%; 
-  min-width:7%;
+  min-width:20px;
   height: 1em;
   font-size: 1em;
   padding: 0.8em;
@@ -98,7 +102,7 @@
   border: 1px solid #000;
   border-color: grey;
   align-items: center;
-  margin-top: 3.125em; 
+  margin-top: 1.125em; 
   margin-right:2%;
   border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
@@ -110,13 +114,13 @@ input {
 
 
 .dropdown{
-  background-color: blue;
+ 
   display: flex;
   width:50%
 }
 
 .combined{
-    background-color: red; 
+   
     display: flex;
     flex-direction:row;
     margin-top:1.253em;
@@ -130,12 +134,11 @@ input {
 .combined2{
     display:flex;
     flex-direction: row;
-    background-color: orange;
-    margin-top: 2.5rem;
+    margin-top: 0.2rem;
     width: 50%;
     justify-content:flex-start;
     align-items:center;
-  
+    position: relative;
 }
 
 .heading {
@@ -149,14 +152,14 @@ input {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-right:3%;
+    margin-right:6%;
     
    
 }
 
 .heading2{
   flex-basis: auto;
-   flex-basis: 40%;
+  flex-basis: 40%;
   background:black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -164,8 +167,8 @@ input {
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   margin-right:10%;
- 
-}
+  
+ } 
 
 
 
@@ -232,12 +235,10 @@ input {
     background-color: white;
     padding: 1rem;
     line-height: 1.2;
-    
-    /* border: 1px solid #2b2424; */
     border-radius: 8px;
 }
 
-/* Adjust the styles for the title and description within the "main" div */
+
 
 .description {
   font-size: 1.4rem;
@@ -246,7 +247,6 @@ input {
   color: #555;
 }
 
-/* ...existing styles... */
 
 .note {
   width: 55%;
@@ -264,34 +264,25 @@ input {
   }
   
   .noteText {
-    font-size: 15px; /* Increase the font size to make the text bigger */
-    color: black; /* Darken the text color for better visibility */
+    font-size: 15px; 
+    color: black; 
     text-align:left;
     font-family: 'Poppins',sans-serif;
     line-height: 1.2;
 }
   
 
-  .infoIcon {
+.infoIcon {
     cursor: pointer;
-    /* margin-top:0 px;
-    margin-right: 700px; */
-    /* Add margin to separate the info icon from the option label */
   }
   
-  /* Styles for the icon content */
-  .infoIconContent {
-    font-size: 16px;
-  }
-  
-  /* Styles for the tooltip */
-  .tooltip {
-    position: absolute;
-    top: calc(45%+ 7px); /* Position the tooltip below the info icon */
-    left: 31.65rem;
+  .tooltip{
+    position:absolute;
+    top:calc(100%+7px);
+    left: 110%; 
     border: 1px solid #e0e0e0;
-    transform: translateX(0%);
-    display: none; /* Hide the tooltip by default */
+    transform: translateX(-50%);
+    display: none; 
     padding: 4px 8px;
     background-color: white;
     color: #131010;
@@ -301,7 +292,6 @@ input {
     width: 400px;
   }
   
-  /* Show the tooltip on hover */
-  .infoIcon:hover .tooltip {
+  .combined2:hover .tooltip {
     display: block;
   }
