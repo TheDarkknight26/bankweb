@@ -118,12 +118,12 @@ const Result = () => {
       <br />
       <h2 className={styles.maturityDate}><strong>Maturity Date:</strong> Based on the provided maturity period from today, the calculated maturity date is {formattedDate}</h2>
       <div className={styles.note}>
-        <p className={styles.noteText}>
+        <div className={styles.noteText}>
           <strong>NOTE:</strong>If the banks you are looking for are not listed below, it is probably due to the reason that they are not included in our current dataset.
-        </p>
+        </div>
       </div>
 
-      <h2>Normal Interest Rate among selected Banks</h2>
+      <div className={styles.normal}>Normal Interest Rate among selected Banks</div>
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <tr>
@@ -151,7 +151,7 @@ const Result = () => {
       </div>
       <br />
 
-      <h2>Discover the Highest Interest Rate</h2>
+      <div className={styles.normal}>Discover the Highest Interest Rate</div>
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <tr>

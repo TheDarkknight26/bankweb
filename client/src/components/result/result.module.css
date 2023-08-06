@@ -14,7 +14,7 @@
   font-size: 20px;
   color: #383b3b;
   margin-bottom: 10px;
-  
+  max-width: 80%;
 }
 
 
@@ -50,7 +50,7 @@
 }
 
 .tableContainer {
-    width: 75%;
+    width: 80%;
     margin: 0 auto; /* Centers the table horizontally */
     margin-left:0;
     max-height: 350px; /* Adjust the maximum height as needed */
@@ -70,7 +70,7 @@
   }
   
   .noteText {
-    font-size: 15px;
+    font-size: 1em;
     color: #333;
     text-align:left;
     
@@ -104,4 +104,29 @@
   .table tr:hover {
     background-color: #e3e3e3;
   }
+
+  .normal{
+    margin-top:1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;;
+  }
   
+  @media (max-width:768px){
+    .table{
+      font-size: 0.7em;
+    }
+    .normal{
+      font-size:1em;
+    }
+    .maturityDate{
+      font-size:1.2em;
+    }
+    .noteText{
+      font-size: 1em;
+    }
+    .NewSearchBtn{
+      font-size: 0.8em;
+    }
+
+  }

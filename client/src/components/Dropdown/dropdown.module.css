@@ -174,3 +174,12 @@
     visibility: visible;
     float: right;
 }
+
+@media(max-width:768px){
+  .selectAllCheckbox{
+    font-size: 0.7em;
+  }
+  .dropdownContainer{
+    font-size: 0.7em;
+  }
+}
