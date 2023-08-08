@@ -370,6 +370,18 @@
     .submitBtn>button{
       font-size: 0.8em;
     }
+     .dropdown{
+      width:80%
+    }
   
   }
+
+
+  @media (max-width: 350px){
+    .dropdown{
+      width:100%
+      
+    }
+  } 
+
   
