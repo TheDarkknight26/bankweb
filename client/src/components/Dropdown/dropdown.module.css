@@ -182,4 +182,7 @@
   .dropdownContainer{
     font-size: 0.7em;
   }
+.selectAllCheckboxLabel{
+    font-size: 0.5rem;
+  }
 }
