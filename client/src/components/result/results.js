@@ -63,7 +63,7 @@ const Result = () => {
 
   const fetchBankData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/result", {
+      const response = await axios.get("bankproject-alpha.vercel.app/result", {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
@@ -78,7 +78,7 @@ const Result = () => {
 
   const fetchBankDataBetweenDates = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/resultbtwdates", {
+      const response = await axios.get("bankproject-alpha.vercel.app/resultbtwdates", {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
