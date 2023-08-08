@@ -23,13 +23,15 @@ const HomePage = () => {
   const [maximumdate,setMaximumdate] = useState("");
 
   const options = [
-    { value: "State Bank of India", label: "State Bank of India" },
+    {value: "State Bank of India", label: "State Bank of India" },
+    {value:"HDFC Bank",label:"HDFC Bank"},
+    {value:"Axis Bank",label:"Axis Bank"},
+    { value:"ICICI Bank", label: "ICICI Bank" },
+    { value: "Punjab National Bank", label: "Punjab National Bank" },
     { value: "Indian Bank", label: "Indian Bank" },
     { value: "Kotak Bank", label: "Kotak Mahindra Bank" },
-    { value: "ICICI Bank", label: "ICICI Bank" },
     { value: "Bank of Baroda", label: "Bank of Baroda" },
     { value: "Canara Bank", label: "Canara Bank" },
-    { value: "Punjab National Bank", label: "Punjab National Bank" },
     { value: "Union Bank of India", label: "Union Bank of India" },
     { value: "IDBI Bank", label: "IDBI Bank" },
     { value: "Bank of India", label: "Bank of India" },
