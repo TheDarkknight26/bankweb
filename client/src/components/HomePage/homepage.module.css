@@ -15,7 +15,471 @@
 
 .disclaimer {
   text-align: left;
+  font-size: 1.5em;.main {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 4rem;
+  font-family: 'Poppins',sans-serif;
+  background-repeat: no-repeat;
+  background: url('../../../public/assets/piggy\ bank.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 50%;
+  margin-bottom: 5.25em; /* Adjusted to use em */
+}
+
+.disclaimer {
+  text-align: left;
   font-size: 1.5em;
+  font-weight: 600;
+  font-family: 'Poppins',sans-serif;
+  margin-left: -0.3125em;
+  padding: 0.5em;
+
+}
+
+.title {
+  width: 60%;
+  font-size: 3em; /* Adjusted to use em */
+  font-weight: 400;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 80%;
+}
+
+.selectBank {
+  max-width: 4.0625em; /* Adjusted to use em */
+  height: 0.8em;
+  font-size: 1.2em;
+  padding: 1em 0 0 0;
+  background: rgba(8, 8, 8, 0.4);
+  border: none;
+  border-radius: 0.5em;
+}
+
+
+.left {
+ 
+  flex-wrap: nowrap;
+  min-width: 5%;
+  max-width: 10%;
+  height: 0.9em;
+  font-size: 1rem; 
+  padding: 1rem;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-top: 0.525em; 
+  border-radius: 0.5em 0 0 0.5em;
+  min-width: 20px;
+}
+
+
+
+.mid {
+  flex-wrap: nowrap;
+  max-width: 10%;
+  height: 0.9em;
+  font-size: 1rem; 
+  padding: 1rem;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-top: 0.525em; 
+  border-radius: 0;
+  min-width: 20px;
+
+}
+
+.right {
+  
+  flex-wrap: nowrap;
+  max-width: 10%;
+  height: 0.9em;
+  font-size: 1rem; 
+  padding: 1rem;
+  border: 1px solid #000;
+  border-color: grey;
+  margin-top: 0.525em; 
+  border-radius: 0 0.5em 0.5em 0;
+  margin-right:8%;
+  min-width: 20px;
+}
+
+.flexmonth {
+  flex-shrink: 0.2;
+  max-width: 5em;
+  min-width:2em;
+  height: 1em;
+  font-size: 1em;
+  padding: 0.8em;
+  background: white;
+  border: 1px solid #000;
+  border-color: grey;
+  align-items: center;
+  border-radius: 0.5em 0.5em 0.5em 0.5em;
+  margin-left:0%;
+  margin-right: 2%;
+}
+
+
+
+.dropdown{
+ display: flex;
+ width:50%
+}
+
+.combined{
+  flex-wrap: nowrap;
+    display: flex;
+    flex-direction:row;
+    margin-top:1.253em;
+    width:50%;
+    height:1rem;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.combined2{
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content:flex-start;
+    align-items:center;
+   
+}
+
+.flexibility{
+  
+  display:flex;
+  flex-direction: row;
+  margin-top: 0.3rem;
+  width: 50%;
+  margin-top:2%;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.flexbracket{
+  
+  display:flex;
+  flex-direction: row;
+  width: 50%;
+  margin-top:0.2rem;
+ justify-content:flex-start;
+  align-items:center;
+}
+
+.heading {
+   flex-basis: 100%;
+   font-size: 1.5em;
+    flex-wrap: nowrap;
+    min-width: 100%;
+    max-width: 100%;
+    background:black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right:6%;
+    
+   
+}
+
+
+
+.heading2{
+  flex-basis: auto;
+  flex-basis: 40%;
+  background:black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  margin-right:10%;
+  
+ } 
+
+ 
+
+.submitBtn>button {
+    margin-top: 2rem;
+    cursor: pointer;
+    color: blue;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px ;
+    border: none;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 4px;
+    border-color: blue;
+    margin-right: 15px;
+}
+
+
+.submitBtn>button:hover {
+  margin-top: 2rem;
+  cursor: pointer;
+  color: white;
+  background-color:rgb(11, 181, 248);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px ;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  border-color:rgb(11, 181, 248);
+  margin-right: 15px;
+}
+
+.whatWeDo{
+  
+  background-color:white;
+  border-radius: 8px;
+  max-width: 70%;
+  margin-bottom: 0.1rem;
+  opacity:80%;
+  font-size: 2em;
+  margin-left:10px;
+  background: black;
+  margin-top: 2em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.whatWeDoContent {
+    width: 50%;
+    font-size: 1rem;
+    line-height: 1;
+    color: rgb(71, 67, 67);
+    margin-bottom: 30px;
+    font-family: 'Poppins',sans-serif;
+    background-color: white;
+    padding: 1rem;
+    line-height: 1.2;
+    border-radius: 8px;
+}
+
+
+
+.description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+
+.note {
+  width: 55%;
+  font-size: 1em;
+  line-height: 1;
+  color: black;
+  margin-bottom: 30px;
+  margin-left:-2px;
+  font-family: Open Sans;
+  background-color: rgb(250, 250, 139);
+  padding: 5px;
+  border: 1px solid #2b2424;
+  border-radius: 8px;
+  margin-top: 20px;
+  }
+  
+  .noteText {
+    font-size: 1em; 
+    color: black; 
+    text-align:left;
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.2;
+}
+  
+
+.infoIcon {
+    flex-wrap: nowrap;
+    cursor: pointer;
+    margin-right:20%;
+    align-items: center;
+  
+}
+  
+.tooltip{
+    position:absolute;
+    top:calc(100%+7px);
+    left: 15%; 
+    border: 1px solid #e0e0e0;
+    transform: translateX(0%);
+    display: none; 
+    padding: 4px 8px;
+    background-color: white;
+    color: #131010;
+    font-size: 0.9rem;
+    font-family: Open sans;
+    border-radius: 4px;
+    width: 400px;
+  }
+  
+  .infoIcon:hover .tooltip {
+    display: block;
+  }
+
+
+  @media (max-width: 768px) {
+    .title{
+      font-size:1.5em;
+      width:80%
+    }
+    .whatWeDo{
+      font-size:1.2em;
+      margin-left: 0;
+    }
+    .heading {
+      font-size: 0.9em;
+      max-width: 70%; 
+    }
+    .heading2{
+      font-size: 0.9em;
+      max-width:70%;
+    }
+
+    .whatWeDoContent{
+      font-size:0.8em;
+      margin-left: -1rem;
+    }
+    .tooltip{
+      font-size: 0.6em;
+    }
+    .noteText{
+      font-size: 0.8em;
+    }
+
+    .left{
+       font-size:0.5em;
+       min-width:5%;
+       height:1.06em;
+    }
+    .right{
+      font-size:0.5em;
+      min-width: 5%;
+      height:1.06em;
+    }
+    .mid{
+      font-size: 0.5em;
+      min-width: 5%;
+      height:1.06em;
+    }
+    .selectBank{
+      font-size:0.5em;
+      height: 0.5em;
+    }
+    .flexmonth{
+      font-size: 0.5em;
+      height: 1.4rem;
+    }
+    .submitBtn>button{
+      font-size: 0.8em;
+    }
+    .dropdown{
+      width:80%
+      
+    }
+    .main{
+      margin-left:2rem;
+      background-image: none;
+    }
+
+    .note{
+      width:90%
+    }
+    .whatWeDoContent{
+      width: 90%;
+    }
+    
+  
+  }
+  
+
+  @media (max-width: 350px){
+
+    .title{
+      font-size:1.5em;
+      width:80%
+    }
+    .whatWeDo{
+      font-size:1.2em;
+       margin-left: 0;
+    }
+    .heading {
+      font-size: 0.9em;
+      max-width: 70%; 
+    }
+    .heading2{
+      font-size: 0.9em;
+      max-width:70%;
+    }
+
+    .whatWeDoContent{
+      font-size:0.8em;
+      margin-left: -1rem;
+    }
+    .tooltip{
+      font-size: 0.6em;
+    }
+    .noteText{
+      font-size: 0.8em;
+    }
+
+    
+    .left{
+      font-size:0.5em;
+      min-width:4%;
+      height:1.06em;
+   }
+   .right{
+     font-size:0.5em;
+     min-width: 4%;
+     height:1.06em;
+   }
+   .mid{
+     font-size: 0.5em;
+     min-width: 4%;
+     height:1.06em;
+   }
+   .flexmonth{
+    font-size: 0.5em;
+    height: 1.4rem;
+  }
+    .selectBank{
+      font-size:0.5em;
+      
+    }
+    
+    .submitBtn>button{
+      font-size: 0.8em;
+    }
+    .dropdown{
+      width:100%
+    }
+    .main{
+      margin-left:2rem;
+      background-image: none;
+    }
+
+    .note{
+      width:90%
+    }
+    .whatWeDoContent{
+      width: 90%;
+    }
+
+  } 
   font-weight: 600;
   font-family: 'Poppins',sans-serif;
   margin-left: -0.3125em;
