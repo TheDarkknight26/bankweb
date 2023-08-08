@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:["https://bankproject-frontend.vercel.app"];
+    origin:["https://bankproject-frontend.vercel.app/"];
     methods:["POST","GET"],
     credentials:true
 }
