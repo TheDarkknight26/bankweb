@@ -37,11 +37,11 @@
     margin-top: 2rem;
     cursor: pointer;
     color: white;
-    background-color: skyblue;
+    background-color: background-color:rgb(11, 181, 248);;
     font-size: 1rem;
     font-weight: 400;
     padding: 10px ;
-    border: none;
+    border-color:rgb(11, 181, 248);
     border: 1px solid #000;
     border-radius: 4px;
     border-color: blue;
