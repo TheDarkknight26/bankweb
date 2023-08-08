@@ -313,8 +313,7 @@
     display: block;
   }
 
-
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
     .title{
       font-size:1.5em;
       width:80%
@@ -346,27 +345,31 @@
     .left{
        font-size:0.5em;
        min-width:5%;
+       max-height:0.03rem;
     }
     .right{
       font-size:0.5em;
       min-width: 5%;
+      max-height:0.03rem;
     }
     .mid{
       font-size: 0.5em;
       min-width: 5%;
+      max-height:0.03rem;
     }
     .selectBank{
       font-size:0.5em;
     }
     .flexmonth{
       font-size: 0.5em;
-      min-height: 1.4em;
+      min-height: 0.9rem;
     }
     .submitBtn>button{
       font-size: 0.8em;
     }
     .dropdown{
       width:80%
+      
     }
     .main{
       margin-left:2rem;
@@ -414,25 +417,33 @@
       font-size: 0.8em;
     }
 
+    
     .left{
-       font-size:0.5em;
-       min-width:5%;
-    }
-    .right{
       font-size:0.5em;
-      min-width: 5%;
-    }
-    .mid{
-      font-size: 0.5em;
-      min-width: 5%;
-    }
+      min-width:5%;
+      max-height:0.04rem;
+   }
+   .right{
+     font-size:0.5em;
+     min-width: 5%;
+     max-height:0.04rem;
+   }
+   .mid{
+     font-size: 0.5em;
+     min-width: 5%;
+     max-height:0.04rem;
+   }
+   .selectBank{
+     font-size:0.5em;
+   }
+   .flexmonth{
+     font-size: 0.5em;
+     min-height: 0.9rem;
+   }
     .selectBank{
       font-size:0.5em;
     }
-    .flexmonth{
-      font-size: 0.5em;
-      height: 1.2rem;
-    }
+    
     .submitBtn>button{
       font-size: 0.8em;
     }
