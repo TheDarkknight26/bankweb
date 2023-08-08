@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 50%;
-  margin-bottom: 11.25em; /* Adjusted to use em */
+  margin-bottom: 5.25em; /* Adjusted to use em */
 }
 
 .disclaimer {
@@ -112,7 +112,7 @@
 
 .dropdown{
  display: flex;
-  width:50%
+ width:50%
 }
 
 .combined{
@@ -153,7 +153,7 @@
   flex-direction: row;
   width: 50%;
   margin-top:0.2rem;
-  justify-content:flex-start;
+ justify-content:flex-start;
   align-items:center;
 }
 
@@ -222,23 +222,18 @@
 }
 
 .whatWeDo{
-  margin-left:5px;
+  
   background-color:white;
   border-radius: 8px;
   max-width: 70%;
-  margin-bottom:15px;
-  opacity:80%;
-
-}
-
-.whatWeDo{
-  font-size: 2em;
   margin-bottom: 0.1rem;
+  opacity:80%;
+  font-size: 2em;
+  margin-left:10px;
   background: black;
+  margin-top: 2em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   margin-top: 40px;
-   
 }
 
 
@@ -249,7 +244,6 @@
     line-height: 1;
     color: rgb(71, 67, 67);
     margin-bottom: 30px;
-    margin-left:-8px;
     font-family: 'Poppins',sans-serif;
     background-color: white;
     padding: 1rem;
@@ -322,66 +316,139 @@
 
   @media (max-width: 768px) {
     .title{
-      font-size:2em;
+      font-size:1.5em;
+      width:80%
     }
     .whatWeDo{
-      font-size:1.5em;
+      font-size:1.2em;
+      margin-left: 0;
     }
     .heading {
-      font-size: 0.9em; /* Adjust the font size as needed */
-      max-width: 70%; /* Adjust the maximum width as needed */
+      font-size: 0.9em;
+      max-width: 70%; 
     }
     .heading2{
       font-size: 0.9em;
       max-width:70%;
     }
-  
-    .whatWeDo{
-      font-size: 1.5em;
-    }
+
     .whatWeDoContent{
       font-size:0.8em;
+      margin-left: -1rem;
     }
     .tooltip{
-      font-size: 0.7em;
+      font-size: 0.6em;
     }
     .noteText{
       font-size: 0.8em;
     }
 
     .left{
-       font-size:0.7em;
+       font-size:0.5em;
        min-width:5%;
     }
     .right{
-      font-size:0.7em;
+      font-size:0.5em;
       min-width: 5%;
     }
     .mid{
-      font-size: 0.7em;
+      font-size: 0.5em;
       min-width: 5%;
     }
     .selectBank{
-      font-size:0.7em;
+      font-size:0.5em;
     }
     .flexmonth{
-      font-size: 0.7em;
+      font-size: 0.5em;
+      min-height: 1.4em;
     }
     .submitBtn>button{
       font-size: 0.8em;
     }
-     .dropdown{
+    .dropdown{
       width:80%
     }
+    .main{
+      margin-left:2rem;
+      background-image: none;
+    }
+
+    .note{
+      width:90%
+    }
+    .whatWeDoContent{
+      width: 90%;
+    }
+    
   
   }
-
+  
 
   @media (max-width: 350px){
+
+    .title{
+      font-size:1.5em;
+      width:80%
+    }
+    .whatWeDo{
+      font-size:1.2em;
+       margin-left: 0;
+    }
+    .heading {
+      font-size: 0.9em;
+      max-width: 70%; 
+    }
+    .heading2{
+      font-size: 0.9em;
+      max-width:70%;
+    }
+
+    .whatWeDoContent{
+      font-size:0.8em;
+      margin-left: -1rem;
+    }
+    .tooltip{
+      font-size: 0.6em;
+    }
+    .noteText{
+      font-size: 0.8em;
+    }
+
+    .left{
+       font-size:0.5em;
+       min-width:5%;
+    }
+    .right{
+      font-size:0.5em;
+      min-width: 5%;
+    }
+    .mid{
+      font-size: 0.5em;
+      min-width: 5%;
+    }
+    .selectBank{
+      font-size:0.5em;
+    }
+    .flexmonth{
+      font-size: 0.5em;
+      height: 1.2rem;
+    }
+    .submitBtn>button{
+      font-size: 0.8em;
+    }
     .dropdown{
       width:100%
-      
     }
-  } 
+    .main{
+      margin-left:2rem;
+      background-image: none;
+    }
 
-  
+    .note{
+      width:90%
+    }
+    .whatWeDoContent{
+      width: 90%;
+    }
+
+  } 
