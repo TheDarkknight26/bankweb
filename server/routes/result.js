@@ -6,7 +6,10 @@ router.use(express.json());
 // Connection URL
 const url =
   "mongodb+srv://theanishk:sXDNAjLpOZvPdAQa@fdproject.qwukrev.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(url, { useUnifiedTopology: true });
+const client = new MongoClient(url, { maxIdleTimeMS: 80000,
+  serverSelectionTimeoutMS: 80000,
+  socketTimeoutMS: 0,
+  connectTimeoutMS: 0, useNewUrlParser: true,useUnifiedTopology: true });
 
 // Connect to the MongoDB server
 client.connect((err) => {
