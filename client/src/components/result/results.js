@@ -44,7 +44,10 @@ const Result = () => {
   myMap.set("Nanital Bank", "https://www.nainitalbank.co.in/English/interest_rate.aspx");
   myMap.set("DCB Bank", "https://www.dcbbank.com/dcb-fixed-deposits/deposit-rates");
   myMap.set("CSB Bank", "https://www.csb.co.in/interest-rates");
-  myMap.set("IDFC Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates")
+  myMap.set("IDFC Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates");
+  myMap.set("Axis Bank","https://www.axisbank.com/interest-rate-on-deposits");
+  myMap.set("HDFC Bank","https://www.hdfcbank.com/personal/save/deposits/fixed-deposit-interest-rate")
+
 
 
   const handleclick = (event) => {
