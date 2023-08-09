@@ -320,7 +320,8 @@
     }
     .title{
       font-size:1.5em;
-      width:80%
+      width:80%;
+      font-weight:bold;
     }
     .whatWeDo{
       font-size:1.2em;
@@ -398,7 +399,8 @@
     }
    .title{
       font-size:1.5em;
-      width:80%
+      width:80%;
+     font-weight:bold;
     }
     .whatWeDo{
       font-size:1.2em;
