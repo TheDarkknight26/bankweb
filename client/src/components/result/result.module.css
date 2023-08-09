@@ -113,6 +113,9 @@
   }
   
   @media (max-width:768px){
+    .main{
+      margin-left: 2rem;
+    }
     .table{
       font-size: 0.7em;
     }
@@ -128,5 +131,7 @@
     .NewSearchBtn{
       font-size: 0.8em;
     }
-
+  .tableContainer{
+      width: 90%;
+    }
   }
