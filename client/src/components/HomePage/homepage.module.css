@@ -315,6 +315,9 @@
 
 
   @media (max-width: 768px) {
+     .combined{
+      margin-top: 0.8em; 
+    }
     .title{
       font-size:1.5em;
       width:80%
@@ -390,8 +393,10 @@
   
 
   @media (max-width: 350px){
-
-    .title{
+     .combined{
+      margin-top: 0.8em; 
+    }
+   .title{
       font-size:1.5em;
       width:80%
     }
