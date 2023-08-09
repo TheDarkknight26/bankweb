@@ -33,6 +33,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 80%;
+  margin-top:0.5em;
 }
 
 .selectBank {
@@ -231,7 +232,7 @@
   font-size: 2em;
   margin-left:10px;
   background: black;
-  margin-top: 2em;
+  margin-top: 1em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
