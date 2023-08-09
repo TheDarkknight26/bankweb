@@ -141,16 +141,16 @@ const HomePage = () => {
           </div>
           <div className={styles.combined2}>
             <div className={styles.brackets}>
-            <input placeholder="Years" value={year} onChange={handleyear} className={`${styles.left}`} />
-            <input placeholder="Months" value={month} onChange={handlemonth} className={` ${styles.mid}`} />
-            <input placeholder="Days" onChange={handleday} value={day} className={`${styles.right}`} />
+            <input type="number" placeholder="Years" value={year} onChange={handleyear} className={`${styles.left}`} />
+            <input type="number" placeholder="Months" value={month} onChange={handlemonth} className={` ${styles.mid}`} />
+            <input  type="number" placeholder="Days" onChange={handleday} value={day} className={`${styles.right}`} />
             </div>
             </div>
             <div className={styles.flexibility}>
             <span className={`${styles.heading2}`}>Flexibility</span>
             </div>
             <div className={styles.flexbracket}>
-            <input placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
+            <input type="number" placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
             <div className={styles.infoIcon}>
             <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}}/>
             <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it. This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
