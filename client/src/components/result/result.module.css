@@ -115,6 +115,7 @@
   @media (max-width:768px){
     .main{
       margin-left: 2rem;
+      margin-top:2rem;
     }
     .table{
       font-size: 0.7em;
