@@ -60,7 +60,7 @@ const HomePage = () => {
     return (
       <div className={styles.infoIcon}>
       <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}} />
-      <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it.Remember,<strong>all values must be positive integers</strong>.This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
+      <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it.This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
     </div>
     );
   };
@@ -130,7 +130,7 @@ const HomePage = () => {
           <div className={styles.whatWeDoi}>
             <div className={styles.whatWeDo}>What We Do ?</div>
             <div className={styles.whatWeDoContent}>
-             We empower you to optimize your financial growth effortlessly. Our website allows you to leverage your funds wisely, making the most of your investments. Simply input your maturity date, desired flexibility, and preferred banks, and let our smart algorithm do the rest. Discover the highest interest rates available within your chosen period, enabling you to make informed decisions and maximize your returns.
+             We empower you to optimize your financial growth effortlessly. Our website allows you to leverage your funds wisely, making the most of your investments. Simply input your maturity date, desired flexibility, and preferred banks, and let our smart algorithm do the rest.Remember,<strong>all values must be positive integers</strong>. Discover the highest interest rates available within your chosen period, enabling you to make informed decisions and maximize your returns.
             </div>
           </div>
           <div className={styles.dropdown}>
@@ -141,16 +141,16 @@ const HomePage = () => {
           </div>
           <div className={styles.combined2}>
             <div className={styles.brackets}>
-            <input type="number" placeholder="Years" value={year} min="0" onChange={handleyear} className={`${styles.left}`} />
-            <input type="number" placeholder="Months" value={month} min="0" onChange={handlemonth} className={` ${styles.mid}`} />
-            <input  type="number" placeholder="Days" onChange={handleday} min="0" value={day} className={`${styles.right}`} />
+            <input type="number" min="0" placeholder="Years" value={year}  onChange={handleyear} className={`${styles.left}`} />
+            <input type="number"  min="0" placeholder="Months" value={month} onChange={handlemonth} className={` ${styles.mid}`} />
+            <input  type="number"  min="0" placeholder="Days" onChange={handleday}  value={day} className={`${styles.right}`} />
             </div>
             </div>
             <div className={styles.flexibility}>
             <span className={`${styles.heading2}`}>Flexibility</span>
             </div>
             <div className={styles.flexbracket}>
-            <input type="number" placeholder="Months" min="0" value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
+            <input type="number" min="0" placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
             <div className={styles.infoIcon}>
             <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}}/>
             <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it. This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
