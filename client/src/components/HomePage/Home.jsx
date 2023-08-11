@@ -130,7 +130,7 @@ const HomePage = () => {
           <div className={styles.whatWeDoi}>
             <div className={styles.whatWeDo}>What We Do ?</div>
             <div className={styles.whatWeDoContent}>
-             We empower you to optimize your financial growth effortlessly. Our website allows you to leverage your funds wisely, making the most of your investments. Simply input your maturity period, desired flexibility, and preferred banks.Remember,<strong> you can either leave a field blank (to consider it as zero) or input a non-negative integer value</strong>. Discover the highest interest rates available within your chosen period, enabling you to make informed decisions and maximize your returns.
+             We empower you to optimize your financial growth effortlessly.Simply input your maturity period, desired flexibility, and preferred banks.Remember,<strong> you can either leave a field blank (to consider it as zero) or input a non-negative integer value</strong>. Discover the highest interest rates available within your chosen period, enabling you to make informed decisions and maximize your returns.
             </div>
           </div>
           <div className={styles.dropdown}>
