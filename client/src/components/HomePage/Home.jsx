@@ -30,6 +30,7 @@ const HomePage = () => {
     { value: "Punjab National Bank", label: "Punjab National Bank" },
     { value: "Indian Bank", label: "Indian Bank" },
     { value: "Kotak Mahindra Bank", label: "Kotak Mahindra Bank" },
+    { value:"Central Bank of India",label:"Central Bank of India"},
     { value: "Bank of Baroda", label: "Bank of Baroda" },
     { value: "Canara Bank", label: "Canara Bank" },
     { value: "Union Bank of India", label: "Union Bank of India" },
