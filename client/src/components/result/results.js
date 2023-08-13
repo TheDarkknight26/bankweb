@@ -18,7 +18,7 @@ const Result = () => {
   myMap.set("State Bank of India", "https://sbi.co.in/web/interest-rates/deposit-rates/retail-domestic-term-deposits");
   myMap.set("Indian Bank", "https://www.indianbank.in/departments/deposit-rates/#!");
   myMap.set("Central Bank of India", "https://centralbankofindia.co.in/en/interest-rates-on-deposit'");
-  myMap.set("Kotak Bank", "https://www.kotak.com/en/personal-banking/deposits/fixed-deposit/fixed-deposit-interest-rate.html");
+  myMap.set("Kotak Mahindra Bank", "https://www.kotak.com/en/personal-banking/deposits/fixed-deposit/fixed-deposit-interest-rate.html");
   myMap.set("ICICI Bank", "https://www.icicibank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates");
   myMap.set("Bank of Baroda", "https://www.bankofbaroda.in/interest-rate-and-service-charges/deposits-interest-rates");
   myMap.set("Canara Bank", "https://canarabank.com/User_page.aspx?othlink=9");
@@ -28,7 +28,7 @@ const Result = () => {
   myMap.set("Bank of India", "https://bankofindia.co.in/interest-rate/rupee-term-deposit-rate");
   myMap.set("Federal Bank", "https://www.federalbank.co.in/deposit-rate");
   myMap.set("Bandhan Bank", "https://bandhanbank.com/rates-charges");
-  myMap.set("Punjab and Sindh Bank", "https://punjabandsindbank.co.in/content/fdds");
+  myMap.set("Punjab and Sind Bank", "https://punjabandsindbank.co.in/content/fdds");
   myMap.set("Bank of Maharashtra", "https://bankofmaharashtra.in/domestic-term-deposits");
   myMap.set("Yes Bank", "https://www.yesbank.in/personal-banking/yes-individual/deposits/fixed-deposit");
   myMap.set("IndusInd Bank", "https://www.indusind.com/in/en/personal/rates.html");
@@ -41,7 +41,7 @@ const Result = () => {
   myMap.set("City Union Bank", "https://www.cityunionbank.com/deposit-interest-rate");
   myMap.set("Tamilnad Mercantile Bank", "https://www.tmb.in/deposit-interest-rates.aspx");
   myMap.set("Karur Vysya Bank", "https://www.kvb.co.in/interest-rates/resident-nro-deposits/");
-  myMap.set("Nanital Bank", "https://www.nainitalbank.co.in/English/interest_rate.aspx");
+  myMap.set("Nainital Bank", "https://www.nainitalbank.co.in/English/interest_rate.aspx");
   myMap.set("DCB Bank", "https://www.dcbbank.com/dcb-fixed-deposits/deposit-rates");
   myMap.set("CSB Bank", "https://www.csb.co.in/interest-rates");
   myMap.set("IDFC Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates");
