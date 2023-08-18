@@ -42,19 +42,20 @@ const HomePage = () => {
     { value: "Bank of Maharashtra", label: "Bank of Maharashtra" },
     { value: "Yes Bank", label: "Yes Bank" },
     { value: "IndusInd Bank", label: "IndusInd Bank" },
-    { value: "Jammu Kashmir Bank", label: "Jammu Kashmir Bank" },
+    { value: "Jammu & Kashmir Bank", label: "Jammu & Kashmir Bank" },
     { value: "UCO Bank", label: "UCO Bank" },
     { value: "Indian Overseas Bank", label: "Indian Overseas Bank" },
     { value: "Karnataka Bank", label: "Karnataka Bank" },
     { value: "RBL Bank", label: "RBL Bank" },
     { value: "South Indian Bank", label: "South Indian Bank" },
     { value: "Tamilnad Mercantile Bank", label: "Tamilnad Mercantile Bank" },
-    { value: "Karur Vyasa Bank", label: "Karur Vyasa Bank" },
+    { value: "Karur Vysya Bank", label: "Karur Vysya Bank" },
     { value:"City Union Bank",label:"City Union Bank"},
     { value: "Nainital Bank", label: "Nainital Bank" },
     { value: "DCB Bank", label: "DCB Bank" },
     { value: "CSB Bank", label: "CSB Bank" },
-    {value:"IDFC Bank",label:"IDFC Bank"},
+    {value:"IDFC FIRST Bank",label:"IDFC FIRST Bank"},
+    {value:"Dhanlaxmi Bank",label:"Dhanlaxmi Bank"},
   ];
   
   const InfoIcon = () => {
