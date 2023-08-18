@@ -32,7 +32,7 @@ const Result = () => {
   myMap.set("Bank of Maharashtra", "https://bankofmaharashtra.in/domestic-term-deposits");
   myMap.set("Yes Bank", "https://www.yesbank.in/personal-banking/yes-individual/deposits/fixed-deposit");
   myMap.set("IndusInd Bank", "https://www.indusind.com/in/en/personal/rates.html");
-  myMap.set("Jammu and Kashmir Bank", "https://www.jkbank.com/others/common/intrates.php");
+  myMap.set("Jammu & Kashmir Bank", "https://www.jkbank.com/others/common/intrates.php");
   myMap.set("UCO Bank", "https://www.ucobank.com/english/interest-rate-deposit-account.aspx");
   myMap.set("Indian Overseas Bank", "https://www.iob.in/Domestic_Rates");
   myMap.set("Karnataka Bank", "https://karnatakabank.com/personal/term-deposits/interest-rates");
@@ -44,7 +44,7 @@ const Result = () => {
   myMap.set("Nainital Bank", "https://www.nainitalbank.co.in/English/interest_rate.aspx");
   myMap.set("DCB Bank", "https://www.dcbbank.com/dcb-fixed-deposits/deposit-rates");
   myMap.set("CSB Bank", "https://www.csb.co.in/interest-rates");
-  myMap.set("IDFC Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates");
+  myMap.set("IDFC FIRST Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates");
   myMap.set("Axis Bank","https://www.axisbank.com/interest-rate-on-deposits");
   myMap.set("HDFC Bank","https://www.hdfcbank.com/personal/save/deposits/fixed-deposit-interest-rate");
   myMap.set("Dhanlaxmi Bank","https://www.dhanbank.com/interest-rates/");
