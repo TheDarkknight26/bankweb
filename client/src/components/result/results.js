@@ -46,7 +46,8 @@ const Result = () => {
   myMap.set("CSB Bank", "https://www.csb.co.in/interest-rates");
   myMap.set("IDFC Bank","https://www.idfcfirstbank.com/personal-banking/deposits/fixed-deposit/fd-interest-rates");
   myMap.set("Axis Bank","https://www.axisbank.com/interest-rate-on-deposits");
-  myMap.set("HDFC Bank","https://www.hdfcbank.com/personal/save/deposits/fixed-deposit-interest-rate")
+  myMap.set("HDFC Bank","https://www.hdfcbank.com/personal/save/deposits/fixed-deposit-interest-rate");
+  myMap.set("Dhanlaxmi Bank","https://www.dhanbank.com/interest-rates/");
 
 
 
