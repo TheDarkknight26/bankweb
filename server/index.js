@@ -10,7 +10,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:["https://bankproject-frontend.vercel.app"],
+    origin:["https://bankproject-frontend.vercel.app",
+           "https://www.bookfd.in"],
     methods:["POST","GET"],
     credentials:true
 }
