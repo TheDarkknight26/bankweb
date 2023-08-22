@@ -58,14 +58,6 @@ const HomePage = () => {
     {value:"Dhanlaxmi Bank",label:"Dhanlaxmi Bank"},
   ];
   
-  const InfoIcon = () => {
-    return (
-      <div className={styles.infoIcon}>
-      <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}} />
-      <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it.This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
-    </div>
-    );
-  };
 
   useEffect(() => {
     const now = moment().tz('Asia/Kolkata');
@@ -155,7 +147,7 @@ const HomePage = () => {
             <input type="number" min="0" placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
             <div className={styles.infoIcon}>
             <FontAwesomeIcon icon={faCircleInfo} size="lg" style={{color: "#252f41",}}/>
-            <div className={styles.tooltip}>Our financial products offer flexibility in choosing the maturity date. You can select a maturity date with an added flexibility of several months before and after it. This extended period allows you to take advantage of the highest interest rates available in that period, optimizing your returns based on your chosen maturity date.</div>
+            <div className={styles.tooltip}>Our financial product lets you decide when your investment matures. You can choose to add flexibility by specifying how many months you'd like your maturity period to vary. This way, you can take advantage of the best interest rates within that timeframe and maximize your investment's returns.</div>
             </div> 
             </div>
           <div className={styles.submitBtn}>

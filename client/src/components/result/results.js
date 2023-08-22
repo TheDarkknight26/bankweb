@@ -67,7 +67,7 @@ const Result = () => {
 
   const fetchBankData = async () => {
     try {
-      const response = await axios.get("https://bankproject-beta.vercel.app/result", {
+      const response = await axios.get("http://localhost:3001/result", {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
@@ -82,7 +82,7 @@ const Result = () => {
 
   const fetchBankDataBetweenDates = async () => {
     try {
-      const response = await axios.get("https://bankproject-beta.vercel.app/resultbtwdates", {
+      const response = await axios.get("http://localhost:3001/resultbtwdates", {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
@@ -120,14 +120,14 @@ const Result = () => {
         New Search
       </div>
       <br />
-      <h2 className={styles.maturityDate}><strong>Maturity Date:</strong> Based on the provided maturity period from today, the calculated maturity date is {formattedDate}</h2>
+      <h2 className={styles.maturityDate}><strong>Maturity Date:</strong> {formattedDate}</h2>
       <div className={styles.note}>
         <div className={styles.noteText}>
           <strong>NOTE:</strong>If the banks you are looking for are not listed below, it is probably due to the reason that they are not included in our current dataset.
         </div>
       </div>
 
-      <div className={styles.normal}>Normal Interest Rate among selected Banks</div>
+      <div className={styles.normal}>Interest Rates within Exact Maturity Period</div>
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <tr>
@@ -145,7 +145,7 @@ const Result = () => {
                 <td>{banks.Maturity}</td>
                 <td>
                 <a href={bankURL} target="_blank" rel="noopener noreferrer">
-                Visit Bank Website to Book FD
+                Visit Bank's Website 
         </a>
                 </td>
               </tr>
@@ -155,7 +155,7 @@ const Result = () => {
       </div>
       <br />
 
-      <div className={styles.normal}>Discover the Highest Interest Rate</div>
+      <div className={styles.normal}>Maximum Interest Rate within Flexible Maturity Range</div>
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <tr>
@@ -172,7 +172,7 @@ const Result = () => {
                 <td>{banks.maximuminterestrate}</td>
                 <td>{banks.Maturity}</td>
                 <td><a href={bankURL} target="_blank" rel="noopener noreferrer">
-                Visit Bank Website to Book FD
+                Visit Bank's Website
         </a>
           </td>
             </tr>
