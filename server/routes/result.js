@@ -3,22 +3,15 @@ const router = express.Router();
 import { MongoClient } from "mongodb";
 import { DateTime } from "luxon";
 router.use(express.json());
-// Connection URL
-const url =
-  "mongodb+srv://theanishk:sXDNAjLpOZvPdAQa@fdproject.qwukrev.mongodb.net/?retryWrites=true&w=majority";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const url= process.env.MONGOURL;
 const client = new MongoClient(url, { maxIdleTimeMS: 80000,
   serverSelectionTimeoutMS: 80000,
   socketTimeoutMS: 0,
   connectTimeoutMS: 0, useNewUrlParser: true,useUnifiedTopology: true });
-
-// Connect to the MongoDB server
-client.connect((err) => {
-  if (err) {
-    console.error("Error connecting to MongoDB:", err);
-    return;
-  }
-  console.log("Connected to MongoDB");
-});
 
 router.get("/", async (req, res) => {
   try {
