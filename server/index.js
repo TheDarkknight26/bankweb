@@ -19,8 +19,8 @@ app.use(cors());
 const PORT=process.env.PORT || 5000;
 
 
-app.use("/result",bankrouter);
-app.use("/resultbtwdates",bankrouternew);
+app.use("/api/result",bankrouter);
+app.use("/api/resultbtwdates",bankrouternew);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname,'../client/build')));
