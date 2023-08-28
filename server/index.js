@@ -19,12 +19,12 @@ app.use(cors());
 const PORT=process.env.PORT || 5000;
 
 
-app.use("/api/result",bankrouter);
-app.use("/api/resultbtwdates",bankrouternew);
+app.use("/result",bankrouter);
+app.use("/resultbtwdates",bankrouternew);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname,'../client/build')));
-
+   
     app.get('*',(req,res)=>
         res.sendFile(
             path.resolve(__dirname,'../','client','build','index.html')
@@ -33,6 +33,7 @@ if(process.env.NODE_ENV === 'production'){
 } else {
     app.get('/',(req,res)=> res.send('Please set to production')
     );
+  
 }
 
 app.listen(PORT,()=>{
