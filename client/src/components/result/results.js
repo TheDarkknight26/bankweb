@@ -67,7 +67,7 @@ const Result = () => {
 
   const fetchBankData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/result", {
+      const response = await axios.get("/result", {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
@@ -82,7 +82,7 @@ const Result = () => {
 
   const fetchBankDataBetweenDates = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/resultbtwdates", {
+      const response = await axios.get("/resultbtwdates", {
         params: {
           bankNames: JSON.stringify(final.bankNames),
           date: JSON.stringify(final.date),
