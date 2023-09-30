@@ -22,7 +22,9 @@ app.use(cors({
 ));
 
 const PORT=process.env.PORT || 5000;
-
+app.use("/" ,(req,res)=>{
+  res.json("Hello");
+})
 
 app.use("/result",bankrouter);
 app.use("/resultbtwdates",bankrouternew);
