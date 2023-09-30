@@ -1,13 +1,11 @@
 {
-    "version":2,
-    "builds":[
-        {"src": "*.js","use":"@vercel/node"}
-
+    "version": 2,
+    "builds": [
+      { "src": "index.js", "use": "@vercel/node" }
     ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"/"
-        }
+    "routes": [
+      { "src": "/api/result/.*", "dest": "index.js" },
+      { "src": "/api/resultbtwdates/.*", "dest": "index.js" },
+      { "src": "/(.*)", "dest": "/" }
     ]
-}
+  }
