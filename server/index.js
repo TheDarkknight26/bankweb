@@ -15,7 +15,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin:["https://bookfdfrontend.vercel.app"],
+  origin:["https://frontendbookfd.vercel.app"],
   methods:["POST","GET"],
   credentials:true
 }
