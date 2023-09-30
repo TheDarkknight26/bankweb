@@ -15,11 +15,11 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin:["https://frontendbookfd.vercel.app"],
-  methods:["POST","GET"],
-  credentials:true
-}
-));
+  origin: "*", // Allow requests from all origins
+  methods: ["POST", "GET"],
+  credentials: true,
+}));
+
 
 const PORT=process.env.PORT || 5000;
 
