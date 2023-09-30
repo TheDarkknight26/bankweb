@@ -9,18 +9,24 @@ import dotenv from "dotenv";
 dotenv.config();
 import { getGlobals } from 'common-es'
 const { __dirname, __filename } = getGlobals(import.meta.url)
-
+import { fdratesrouter } from "./routes/fdrates.js";
 
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:["https://deploy-mern-1whq.vercel.app"],
+  methods:["POST","GET"],
+  credentials:true
+}
+));
 
 const PORT=process.env.PORT || 5000;
 
 
 app.use("/result",bankrouter);
 app.use("/resultbtwdates",bankrouternew);
+app.use("/fdrates",fdratesrouter);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname,'../client/build')));

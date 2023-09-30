@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../Navbar/navbar.jsx";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -118,6 +119,7 @@ const HomePage = () => {
     <>
       <form onSubmit={handleSubmit}>
         <div className={styles.main}>
+          <div><Navbar/></div>
           <div className={styles.title}>
             Discover the Best Interest Rates for Your Fixed Deposits!
           </div>

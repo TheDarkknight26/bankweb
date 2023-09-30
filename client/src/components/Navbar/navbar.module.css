@@ -1,0 +1,104 @@
+/* Navbar.module.css */
+
+.navbar {
+    margin-top:0.5rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    padding: 0.2rem; 
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navItem {
+    margin-right: 2.5rem; /* Increased gap between items */
+  }
+  
+  .navItem:last-child {
+    margin-right: 0;
+  }
+  
+  .navItem a {
+    text-decoration: none;
+    color: #030000; 
+    font-family:Quicksand, sans-serif;
+    font-style:normal;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+    opacity: 87%;
+    -webkit-background-clip: text;
+    
+  }
+  
+  .navItem a:hover {
+    color: #000; 
+   
+  }
+  
+  /* Line under links */
+  .navItem a::before {
+    content: "";
+    position: absolute;
+    bottom: -0.125rem; /* Line thickness */
+    left: 0;
+    right: 100%;
+    height: 0.125rem; /* Line thickness */
+    background-color: #0c80fc; /* Blue line color */
+    border-radius: 0.25rem; /* Curved edges */
+    transition: right 0.3s ease; /* Slide animation */
+  }
+  
+  .navItem a:hover::before {
+    right: 0; 
+  }
+  
+
+
+@media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem 0; 
+      margin-bottom: 0.2rem;
+    }
+  
+    .navList {
+      justify-content: flex-start; 
+    }
+  
+    .navItem {
+      margin-right: 0.8rem; 
+    }
+  
+    .navItem:last-child {
+      margin-right: 0;
+    }
+  
+    .navItem a {
+      font-size: 1.3rem; 
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .navbar {
+      padding: 0.25rem 0; 
+      margin-bottom: 0.2rem;
+    }
+  
+    .navList {
+      justify-content: flex-start; 
+    }
+  
+    .navItem {
+      margin-right: 0.6rem; 
+    }
+  
+    .navItem a {
+      font-size: 0.92rem; 
+    }
+  }
+  

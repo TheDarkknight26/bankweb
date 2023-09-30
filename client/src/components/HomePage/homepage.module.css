@@ -25,15 +25,15 @@
 
 .title {
   width: 60%;
-  font-size: 3em; /* Adjusted to use em */
-  font-weight: 400;
+  font-size: 2.5em; 
+  font-weight: 700;
   background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 80%;
-  margin-top:0.5em;
+  margin-top:0.1em;
 }
 
 .selectBank {
@@ -90,7 +90,7 @@
   margin-top: 0.525em; 
   border-radius: 0 0.5em 0.5em 0;
   margin-right:8%;
-  min-width: 20px;
+  min-width: 1.2rem;
 }
 
 .flexmonth {
@@ -131,15 +131,14 @@
 .combined2{
     display:flex;
     flex-direction: row;
-    width: 50%;
+    width: 80%;
     justify-content:flex-start;
     align-items:center;
    
 }
 
 .flexibility{
-  
-  display:flex;
+   display:flex;
   flex-direction: row;
   margin-top: 0.3rem;
   width: 50%;
@@ -149,7 +148,6 @@
 }
 
 .flexbracket{
-  
   display:flex;
   flex-direction: row;
   width: 50%;
@@ -307,7 +305,7 @@
     font-size: 0.9rem;
     font-family: Open sans;
     border-radius: 4px;
-    width: 400px;
+    width: 25rem;
   }
   
   .infoIcon:hover .tooltip {
@@ -342,7 +340,9 @@
       margin-left: -1rem;
     }
     .tooltip{
+      top:calc(100%+7px);
       font-size: 0.6em;
+      width:20rem;
     }
     .noteText{
       font-size: 0.8em;
@@ -394,7 +394,7 @@
   }
   
 
-  @media (max-width: 350px){
+  @media (max-width: 450px){
      .combined{
       margin-top: 0.8em; 
     }
@@ -422,23 +422,24 @@
     }
     .tooltip{
       font-size: 0.6em;
+      width:13rem;
     }
     .noteText{
       font-size: 0.8em;
     }
     .left{
       font-size:0.5em;
-      min-width:5%;
+      min-width:0.1rem;
       height:0.4em;
    }
    .right{
      font-size:0.5em;
-     min-width: 5%;
+     min-width: 0.1rem;
      height:0.4em;
    }
    .mid{
      font-size: 0.5em;
-     min-width: 5%;
+     min-width: 0.1rem;
      height:0.4em;
    }
    .flexmonth{

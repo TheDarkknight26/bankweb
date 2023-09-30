@@ -8,6 +8,7 @@ import { useNavigate } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import Spinner from "../Spinner/Spinner.js";
 
+
 const Result = () => {
   const { final, setFinal,flexmonth,setFlexmonth} = useContext(finalContext);
   const navigate = useNavigate();
@@ -116,6 +117,7 @@ const Result = () => {
 
   return (
     <div className={styles.main}>
+     
       <div className={styles.NewSearchBtn} onClick={handleclick}>
         New Search
       </div>
@@ -146,7 +148,7 @@ const Result = () => {
                 <td>
                 <a href={bankURL} target="_blank" rel="noopener noreferrer">
                 Visit Bank's Website 
-        </a>
+              </a>
                 </td>
               </tr>
             );
