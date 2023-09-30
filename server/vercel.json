@@ -6,6 +6,7 @@
     "routes": [
       { "src": "/api/result/.*", "dest": "index.js" },
       { "src": "/api/resultbtwdates/.*", "dest": "index.js" },
+      { "src":"/api/fdrates/.*","dest":"index.js"},
       { "src": "/(.*)", "dest": "/" }
     ]
   }
