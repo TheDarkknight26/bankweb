@@ -14,11 +14,7 @@ import { fdratesrouter } from "./routes/fdrates.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-  origin: "https://banksdatahostingfrontend.vercel.app", // Allow requests from all origins
-  methods: ["POST", "GET"],
-  credentials: true,
-}));
+app.use(cors());
 
 
 const PORT=process.env.PORT || 5000;

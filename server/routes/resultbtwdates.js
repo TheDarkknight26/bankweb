@@ -43,7 +43,7 @@ async function findMaxInterestRateUntilDate(mindate,maxdate,dateStr, bankNames) 
   const dateS = new Date(dateStr);
   const minDate = new Date(mindate);
   const maxDate = new Date(maxdate);
-
+  console.log(minDate,maxDate);
   const pipeline = [
     { $unwind: "$interest_rates" },
     {
@@ -104,9 +104,9 @@ async function findMaxInterestRateUntilDate(mindate,maxdate,dateStr, bankNames) 
     const bankId = doc._id;
     const maxInterestRate = doc.max_interest_rate;
     const maturity = doc.maturity;
-    console.log(
-      `Bank ID: ${bankId}, Maximum Interest Rate until ${dateStr}: ${maxInterestRate} and maturity is ${maturity} in resultbtw`
-    );
+    // console.log(
+    //   `Bank ID: ${bankId}, Maximum Interest Rate until ${dateStr}: ${maxInterestRate} and maturity is ${maturity} in resultbtw`
+    // );
 
     final.push({
       bank_id: bankId,
