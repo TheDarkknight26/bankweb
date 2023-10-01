@@ -46,9 +46,9 @@ const Fdrates = () =>{
 
     const fetchBankfddata = async () => {
         try {
-          const response = await axios.get("/fdrates", {
+          const response = await axios.get("http://localhost:5000/fdrates", {
             params: {
-              bankNames: JSON.stringify(banks), // Send the banks array as a parameter
+              bankNames: JSON.stringify(banks),
             },
           });  
           console.log("Bank data fetched successfully:", response.data)

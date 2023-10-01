@@ -38,6 +38,7 @@ async function findMaxInterestRateUntilDate(dateStr, bankNames) {
 
   const dateS = new Date(dateStr);
   console.log(dateS,"newdate");
+  
   const pipeline = [
     { $unwind: "$interest_rates" },
     {
