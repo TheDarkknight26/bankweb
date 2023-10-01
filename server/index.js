@@ -15,7 +15,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: "*", // Allow requests from all origins
+  origin: "https://frontendbookfd.vercel.app", // Allow requests from all origins
   methods: ["POST", "GET"],
   credentials: true,
 }));
