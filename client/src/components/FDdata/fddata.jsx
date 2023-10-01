@@ -46,7 +46,7 @@ const Fdrates = () =>{
 
     const fetchBankfddata = async () => {
         try {
-          const response = await axios.get("https://banksdatahosting.vercel.app/fdrates", {
+          const response = await axios.get("/fdrates", {
             params: {
               bankNames: JSON.stringify(banks), // Send the banks array as a parameter
             },
