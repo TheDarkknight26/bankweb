@@ -294,16 +294,16 @@
   
 .tooltip{
     position:absolute;
-    top:calc(100%+7px);
+    top:calc(100%+0.58rem);
     left: 15%; 
     border: 1px solid #e0e0e0;
     transform: translateX(0%);
     display: none; 
-    padding: 4px 8px;
+    padding: 0.25rem 0.5rem;
     background-color: white;
     color: #131010;
     font-size: 0.9rem;
-    font-family: Open sans;
+    font-family: 'Poppins',sans-serif;
     border-radius: 4px;
     width: 25rem;
   }

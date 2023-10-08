@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const url= "mongodb+srv://theanishk:sXDNAjLpOZvPdAQa@fdproject.qwukrev.mongodb.net/?retryWrites=true&w=majority";
+const url= process.env.MONGOURL;
 const client = new MongoClient(url, { maxIdleTimeMS: 80000,
   serverSelectionTimeoutMS: 80000,
   socketTimeoutMS: 0,
@@ -35,8 +35,9 @@ router.get("/", async (req, res) => {
 async function findMaxInterestRateUntilDate(dateStr, bankNames) {
   const db = client.db("FD_project");
   const collection = db.collection("interest_rate");
-
-  const dateS = new Date(dateStr);
+  
+  const dateS = new Date(dateStr.replace(/-/g, '\/'));
+  dateS.setMinutes(dateS.getMinutes() - dateS.getTimezoneOffset());
   console.log(dateS,"newdate");
   
   const pipeline = [

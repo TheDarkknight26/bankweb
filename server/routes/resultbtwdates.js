@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const url= "mongodb+srv://theanishk:sXDNAjLpOZvPdAQa@fdproject.qwukrev.mongodb.net/?retryWrites=true&w=majority";
+const url= process.env.MONGOURL;
 const client = new MongoClient(url, { maxIdleTimeMS: 80000,
   serverSelectionTimeoutMS: 80000,
   socketTimeoutMS: 0,
@@ -30,7 +30,7 @@ router.get("/", async (req, res) => {
     console.log(`Error in fetching data in result: ${error}`);
     res.status(500).send({ error: "Internal Server Error" });
   } finally {
-    // Close the MongoDB connection
+    
     await client.close();
   }
 });
@@ -41,8 +41,11 @@ async function findMaxInterestRateUntilDate(mindate,maxdate,dateStr, bankNames) 
 
   // Convert the date string to a Date object
   const dateS = new Date(dateStr);
+  dateS.setMinutes(dateS.getMinutes() - dateS.getTimezoneOffset());
   const minDate = new Date(mindate);
+  minDate.setMinutes(minDate.getMinutes() - minDate.getTimezoneOffset());
   const maxDate = new Date(maxdate);
+  maxDate.setMinutes(maxDate.getMinutes() - maxDate.getTimezoneOffset());
   console.log(minDate,maxDate);
   const pipeline = [
     { $unwind: "$interest_rates" },
