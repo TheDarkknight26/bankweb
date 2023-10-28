@@ -8,15 +8,18 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [16.x,18.x]
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: |
+      - name: Install and build
+        run: |
          cd ./server && npm install
-         cd ../client && npm install 
-         npm run build
+         cd ../client && npm install && npm run build
       
