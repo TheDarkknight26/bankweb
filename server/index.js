@@ -14,7 +14,13 @@ import { fdratesrouter } from "./routes/fdrates.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https:deploy-mern-vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
 
 const PORT=process.env.PORT || 5000;
