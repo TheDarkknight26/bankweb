@@ -1,27 +1,36 @@
-name : Node.js CI
+name: Node.js CI
+
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: self-hosted
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.x] 
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./server/node_modules
+            ./client/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install and build
         run: |
-         cd ./server && npm install
-         cd ../client && npm install && npm run build
-         cd .. && pm2 stop 0 && pm2 start 0
-         sudo service nginx restart
-      
+          cd ./server && npm ci
+          cd ../client && npm ci && npm run build
+          

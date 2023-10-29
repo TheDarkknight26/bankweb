@@ -14,8 +14,8 @@
     justify-content: center;
   }
   
-  .navItem {
-    margin-right: 2.5rem; /* Increased gap between items */
+  .navItem{
+     margin-right: 2.5rem;  
   }
   
   .navItem:last-child {

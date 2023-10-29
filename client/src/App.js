@@ -6,7 +6,7 @@ import{BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Result from './components/result/results';
 import {QueryClient,QueryClientProvider} from "@tanstack/react-query";
 import Fddata from './components/FDdata/fddata.jsx';
-
+import AboutUsPage from './components/AboutUs/About.js';
 
 function App() {
   const [final,setFinal] = useState({
@@ -35,6 +35,7 @@ const client = new QueryClient({
     <Route path="/" element={<HomePage/>}/>
     <Route path="/result" element={<Result/>}/>
     <Route path="/fddata" element={<Fddata/>}/>
+    <Route path='/about' element={<AboutUsPage/>}/>
     </Routes>
     </Router>
     </finalContext.Provider>
