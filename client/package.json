@@ -21,9 +21,7 @@
     "react-select": "^5.7.3",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^1.0.0"
-  },
+ 
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
