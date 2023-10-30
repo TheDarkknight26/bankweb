@@ -33,5 +33,4 @@ jobs:
         run: |
           cd ./server && npm i
           cd ../client && npm i && npm run build
-          cd .. && cd server && pm2 stop 0 && pm2 start 0
-          sudo service nginx restart
+         
