@@ -187,7 +187,10 @@
   
  } 
 
- 
+ .icon {
+  color: rgb(16, 16, 20);
+  font-size: 1.3rem;
+}
 
 .submitBtn>button {
     margin-top: 2rem;

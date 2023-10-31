@@ -148,7 +148,7 @@ const HomePage = () => {
             <div className={styles.flexbracket}>
             <input type="number" min="0" placeholder="Months"  value={flexmon} onChange={handleflexmonth} className={`${styles.selectflex} ${styles.flexmonth}`}/>
             <div className={styles.infoIcon}>
-            <FontAwesomeIcon icon={faCircleInfo}/>
+            <FontAwesomeIcon icon={faCircleInfo} className={styles.icon}/>
             <div className={styles.tooltip}>Our financial product lets you decide when your investment matures. You can choose to add flexibility by specifying how many months you'd like your maturity period to vary. This way, you can take advantage of the best interest rates within that timeframe and maximize your investment's returns.</div>
             </div> 
             </div>
