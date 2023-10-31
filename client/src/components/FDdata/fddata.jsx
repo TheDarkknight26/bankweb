@@ -130,19 +130,20 @@ return (
           <tr>
             <th>Serial Number</th>
             <th>Maturity Period</th>
-            <th>Interest Rate</th>
+            <th>General Public</th>
+            <th>Senior Citizen</th>
           </tr>
         </thead>
         <tbody>
-          {bank.maturityRates.map((rate, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{rate.maturity}</td>
-              <td>{rate.InterestRate}</td>
-            </tr>
-          ))}
-         
-        </tbody>
+    {bank.maturityRates.map((rate, index) => (
+    <tr key={index}>
+      <td>{index + 1}</td>
+      <td>{rate.maturity}</td>
+      <td>{Number.isInteger(rate.GeneralInterestRate) ? rate.GeneralInterestRate : rate.GeneralInterestRate.toFixed(2)}</td>
+      <td>{Number.isInteger(rate.SeniorCitizenInterestRate) ? rate.SeniorCitizenInterestRate : rate.SeniorCitizenInterestRate.toFixed(2)}</td>
+    </tr>
+  ))}
+  </tbody>
       </table>
       </div>
     </div>

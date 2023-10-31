@@ -7,12 +7,15 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const url= process.env.MONGOURL;
-const client = new MongoClient(url, { maxIdleTimeMS: 80000,
+const url = process.env.MONGOURL;
+const client = new MongoClient(url, {
+  maxIdleTimeMS: 80000,
   serverSelectionTimeoutMS: 80000,
   socketTimeoutMS: 0,
-  connectTimeoutMS: 0, useNewUrlParser: true,useUnifiedTopology: true });
-
+  connectTimeoutMS: 0,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 router.get("/", async (req, res) => {
   try {
@@ -24,7 +27,6 @@ router.get("/", async (req, res) => {
     console.log(`Error in fetching data in fdrates: ${error}`);
     res.status(500).send({ error: "Internal Server Error" });
   } finally {
-    
     await client.close();
   }
 });
@@ -33,15 +35,14 @@ async function fdrates(bankNames) {
   const db = client.db("FD_project");
   const collection = db.collection("interest_rate");
 
-  // Convert the date string to a Date object
   
 
   const pipeline = [
-    { $unwind: "$interest_rates" }, // Deconstruct the interest_rates array
+    { $unwind: "$interest_rates" }, 
     {
       $match: {
         bank: { $in: bankNames },
-      }
+      },
     },
     {
       $group: {
@@ -50,52 +51,52 @@ async function fdrates(bankNames) {
           $push: {
             maturity: "$interest_rates.Maturity",
             "General Public": { $toDouble: "$interest_rates.General Public" },
+            "Senior Citizen": { $toDouble: "$interest_rates.Senior Citizen" },
           },
         },
       },
     },
     {
       $project: {
-        _id: 0, // Exclude the _id field
-        bank: "$_id", // Include the bank field
-        maturityRates: 1, // Include the maturityRates field
+        _id: 0, 
+        bank: "$_id", 
+        maturityRates: 1, 
       },
     },
   ];
-  
+
   const result = await collection.aggregate(pipeline).toArray();
   const final = [];
 
   result.forEach((doc) => {
-    const bank = doc.bank; // Bank name
-  const maturityRates = doc.maturityRates; // Array of maturity periods and General Public interest rates for the bank
+    const bank = doc.bank; 
+    const maturityRates = doc.maturityRates; 
 
-  console.log(`Bank: ${bank}`);
-
-  // Create a container to hold all the maturity periods and interest rates for the bank
-  const bankData = {
-    bank: bank,
-    maturityRates: [],
-  };
-
-  // Push the data for each maturity period and General Public interest rate
-  maturityRates.forEach((maturityRate) => {
-    const maturity = maturityRate.maturity;
-    const maximumInterestRate = maturityRate["General Public"]; // Accessing the General Public rate using bracket notation
+    console.log(`Bank: ${bank}`);
 
    
+    const bankData = {
+      bank: bank,
+      maturityRates: [],
+    };
 
-    // Push the maturity period and interest rate to the bankData container
-    bankData.maturityRates.push({
-      maturity: maturity,
-      InterestRate: maximumInterestRate,
+    
+    maturityRates.forEach((maturityRate) => {
+      const maturity = maturityRate.maturity;
+      const generalInterestRate = maturityRate["General Public"]; 
+      const seniorCitizenInterestRate = maturityRate["Senior Citizen"];
+
+      bankData.maturityRates.push({
+        maturity: maturity,
+        GeneralInterestRate: generalInterestRate,
+        SeniorCitizenInterestRate: seniorCitizenInterestRate,
+      });
     });
+
+    
+    final.push(bankData);
   });
 
-  // Push the bankData container to the final array
-  final.push(bankData);
-  });
-  
   return final;
 }
 
