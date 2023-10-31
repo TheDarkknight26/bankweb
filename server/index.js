@@ -16,11 +16,23 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use((req, res, next) => {
+    res.setHeader(
+      "Content-Security-Policy",
+      "default-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+        "style-src 'self' 'unsafe-inline'; " +
+        "img-src 'self' data:;"
+    );
+    next();
+  });
 
 
 const PORT=process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname,'../client/build')));
+
+
 
 app.use("/result",bankrouter);
 app.use("/resultbtwdates",bankrouternew);
