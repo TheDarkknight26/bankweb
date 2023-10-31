@@ -20,17 +20,6 @@ app.use(cors());
 
 const PORT=process.env.PORT || 5000;
 
-app.use(
-    helmet.contentSecurityPolicy({
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "http://128.199.16.167"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'"],
-        manifestSrc: ["'self'"],
-      },
-    })
-  );
 app.use(express.static(path.join(__dirname,'../client/build')));
 
 app.use("/result",bankrouter);
