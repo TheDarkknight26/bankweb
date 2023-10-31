@@ -10,19 +10,23 @@ dotenv.config();
 import { getGlobals } from 'common-es'
 const { __dirname, __filename } = getGlobals(import.meta.url)
 import { fdratesrouter } from "./routes/fdrates.js";
-
+import helmet from "helmet";
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-app.use((req, res, next) => {
-    res.setHeader(
-      'Content-Security-Policy',
-      "default-src 'none'; img-src 'self' http://128.199.16.167; style-src 'self' 'unsafe-inline';"
-    );
-    next();
-  });
+app.use(
+    helmet.contentSecurityPolicy({
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "http://128.199.16.167"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'"],
+        manifestSrc: ["'self'"],
+      },
+    })
+  );
 
 const PORT=process.env.PORT || 5000;
 
