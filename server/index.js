@@ -16,8 +16,17 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use((req, res, next) => {
+    res.setHeader(
+      'Content-Security-Policy',
+      "default-src 'none'; style-src 'self' 'unsafe-inline';"
+    );
+    next();
+  });
 
 const PORT=process.env.PORT || 5000;
+
+
 
 app.use(express.static(path.join(__dirname,'../client/build')));
 
