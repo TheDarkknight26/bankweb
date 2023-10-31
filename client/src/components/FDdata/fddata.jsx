@@ -120,6 +120,11 @@ return (
       Go Back
       </div>
       <br />
+      <div className={styles.note}>
+        <div className={styles.noteText}>
+          <strong>NOTE: </strong>The below data is sourced from our dataset. In cases where a bank has different classifications for senior citizens, the displayed interest rates are for the regular senior citizen category, not the super senior citizen category.
+        </div>
+      </div>
       <div>
   {reorderedFddatanew.map((bank, bankIndex) => (
     <div className={styles.bank} key={bankIndex}>
