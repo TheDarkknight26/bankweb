@@ -44,74 +44,74 @@ const Fdrates = () =>{
     const navigate = useNavigate();
     const banks = Array.from(myMap.keys());
 
-    // const fetchBankfddata = async () => {
-    //     try {
-    //       const response = await axios.get("/fdrates", {
-    //         params: {
-    //           bankNames: JSON.stringify(banks),
-    //         },
-    //       });  
-    //       console.log("Bank data fetched successfully:", response.data)
-    //       return response.data;
-    //     } catch (error) {
-    //       console.log("Error fetching bank data:", error);
-    //       throw error;
-    //     }
-    //   };
+    const fetchBankfddata = async () => {
+        try {
+          const response = await axios.get("/fdrates", {
+            params: {
+              bankNames: JSON.stringify(banks),
+            },
+          });  
+          console.log("Bank data fetched successfully:", response.data)
+          return response.data;
+        } catch (error) {
+          console.log("Error fetching bank data:", error);
+          throw error;
+        }
+      };
 
-    //   const fddata = useQuery(["fddata"], fetchBankfddata);
+      const fddata = useQuery(["fddata"], fetchBankfddata);
 
-    //   if (fddata.isLoading) {
-    //     return <Spinner/>;
-    //   }
-    //   if (fddata.isError) {
-    //     return <p>Error fetching data</p>;
-    //   }
+      if (fddata.isLoading) {
+        return <Spinner/>;
+      }
+      if (fddata.isError) {
+        return <p>Error fetching data</p>;
+      }
     const handleclick = (event) => {
         navigate("/");
       };
   
-  //  const fddatanew = fddata.data || [];
-  //  const desiredBankOrder = [
-  //   "State Bank of India",
-  //   "HDFC Bank",
-  //   "Axis Bank",
-  //   "ICICI Bank",
-  //   "Punjab National Bank",
-  //   "Indian Bank",
-  //   "Kotak Mahindra Bank",
-  //   "Central Bank of India",
-  //   "Bank of Baroda",
-  //   "Canara Bank",
-  //   "Union Bank of India",
-  //   "IDBI Bank",
-  //   "Bank of India",
-  //   "Federal Bank",
-  //   "Bandhan Bank",
-  //   "Punjab and Sind Bank",
-  //   "Bank of Maharashtra",
-  //   "Yes Bank",
-  //   "IndusInd Bank",
-  //   "Jammu & Kashmir Bank",
-  //   "UCO Bank",
-  //   "Indian Overseas Bank",
-  //   "Karnataka Bank",
-  //   "RBL Bank",
-  //   "South Indian Bank",
-  //   "Tamilnad Mercantile Bank",
-  //   "Karur Vysya Bank",
-  //   "City Union Bank",
-  //   "Nainital Bank",
-  //   "DCB Bank",
-  //   "CSB Bank",
-  //   "IDFC FIRST Bank",
-  //   "Dhanlaxmi Bank"
-  // ];
-  // const reorderedFddatanew = fddatanew.sort((a, b) => {
-  //   const indexA = desiredBankOrder.indexOf(a.bank);
-  //   const indexB = desiredBankOrder.indexOf(b.bank);
-  //   return indexA - indexB;
-  // });
+   const fddatanew = fddata.data || [];
+   const desiredBankOrder = [
+    "State Bank of India",
+    "HDFC Bank",
+    "Axis Bank",
+    "ICICI Bank",
+    "Punjab National Bank",
+    "Indian Bank",
+    "Kotak Mahindra Bank",
+    "Central Bank of India",
+    "Bank of Baroda",
+    "Canara Bank",
+    "Union Bank of India",
+    "IDBI Bank",
+    "Bank of India",
+    "Federal Bank",
+    "Bandhan Bank",
+    "Punjab and Sind Bank",
+    "Bank of Maharashtra",
+    "Yes Bank",
+    "IndusInd Bank",
+    "Jammu & Kashmir Bank",
+    "UCO Bank",
+    "Indian Overseas Bank",
+    "Karnataka Bank",
+    "RBL Bank",
+    "South Indian Bank",
+    "Tamilnad Mercantile Bank",
+    "Karur Vysya Bank",
+    "City Union Bank",
+    "Nainital Bank",
+    "DCB Bank",
+    "CSB Bank",
+    "IDFC FIRST Bank",
+    "Dhanlaxmi Bank"
+  ];
+  const reorderedFddatanew = fddatanew.sort((a, b) => {
+    const indexA = desiredBankOrder.indexOf(a.bank);
+    const indexB = desiredBankOrder.indexOf(b.bank);
+    return indexA - indexB;
+  });
   
 
 return (
@@ -126,7 +126,7 @@ return (
         </div>
       </div>
       <div>
-  {/* {reorderedFddatanew.map((bank, bankIndex) => (
+  {reorderedFddatanew.map((bank, bankIndex) => (
     <div className={styles.bank} key={bankIndex}>
       <div className={styles.normal}>{bank.bank}</div>
       <div className={styles.tableContainer}>
@@ -152,11 +152,9 @@ return (
       </table>
       </div>
     </div>
-  ))} */}
+  ))}
 </div>
-
-      
-    </div>
+</div>
 );
 
 };

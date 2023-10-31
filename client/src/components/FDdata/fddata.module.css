@@ -181,3 +181,33 @@
   .tableContainer::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Color of the scrollbar thumb on hover */
   }
+
+  @media (max-width: 400px) {
+    .main{
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
+    .table{
+      font-size: 0.6em;
+    }
+    .normal{
+      font-size: 0.8em;
+    }
+    .maturityDate{
+      font-size: 1em;
+    }
+    .note{
+      min-width: 85%;
+      max-width: 90%;
+    }
+    .noteText{
+      font-size: 0.8em;
+    }
+    .NewSearchBtn{
+      font-size: 0.7em;
+    }
+    .tableContainer{
+      width: 85%;
+    }
+  }
+  
