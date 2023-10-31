@@ -19,7 +19,7 @@ app.use(cors());
 app.use((req, res, next) => {
     res.setHeader(
       'Content-Security-Policy',
-      "default-src 'none'; style-src 'self' 'unsafe-inline';"
+      "default-src 'none'; img-src 'self' http://128.199.16.167; style-src 'self' 'unsafe-inline';"
     );
     next();
   });
