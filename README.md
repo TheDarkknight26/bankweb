@@ -103,7 +103,7 @@ git clone https://github.com/TheDarkknight26/bankappnew.git
 ```
 # Navigate to the project directory
 ```bash
-cd BANKAPP
+cd bankweb
 ```
 # Install backend dependencies
 ```bash
