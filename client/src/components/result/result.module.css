@@ -51,7 +51,7 @@
 }
 
 .tableContainer {
-    width: 80%;
+    max-width: 85%;
     margin: 0 auto; /* Centers the table horizontally */
     margin-left:0;
     max-height: 350px; /* Adjust the maximum height as needed */
@@ -65,7 +65,8 @@
     padding: 3px;
     border-radius: 2px;
     margin-top: 10px;
-    width: 82%;
+    min-width: 70%;
+    max-width: 85%;
     margin-left: 0px;
     margin-right: auto;
   }
@@ -132,6 +133,31 @@
     }
     .NewSearchBtn{
       font-size: 0.8em;
+    }
+  .tableContainer{
+      width: 90%;
+    }
+  }
+
+  @media (max-width:450px){
+    .main{
+      margin-left: 2rem;
+      margin-top:2rem;
+    }
+    .table{
+      font-size: 0.6em;
+    }
+    .normal{
+      font-size:1em;
+    }
+    .maturityDate{
+      font-size:1em;
+    }
+    .noteText{
+      font-size: 0.8em;
+    }
+    .NewSearchBtn{
+      font-size: 0.7em;
     }
   .tableContainer{
       width: 90%;

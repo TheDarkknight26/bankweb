@@ -125,7 +125,8 @@ const Result = () => {
       <h2 className={styles.maturityDate}><strong>Maturity Date:</strong> {formattedDate}</h2>
       <div className={styles.note}>
         <div className={styles.noteText}>
-          <strong>NOTE:</strong>If the banks you are looking for are not listed below, it is probably due to the reason that they are not included in our current dataset.
+          <strong>Note: </strong>
+   If the desired banks are not found in the provided list, it is likely because they are currently not included within our existing dataset.
         </div>
       </div>
 

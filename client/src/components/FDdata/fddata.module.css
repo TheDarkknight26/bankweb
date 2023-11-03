@@ -10,6 +10,26 @@
     background-size: cover;
 }
 
+
+.link, .bankLink {
+  color: blue;
+  text-decoration: none;
+}
+
+.link a, .bankLink a {
+  font-size: inherit;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  margin-top: 0.5rem;
+  color: #007bff;
+}
+
+.link a:hover, .bankLink a:hover {
+  text-decoration: underline;
+}
+
+
 .maturityDate {
   font-size: 20px;
   color: #383b3b;
@@ -67,8 +87,6 @@
   text-align:left;
   
 }
-
-
 
 .tableContainer {
     width: 70%;
@@ -168,11 +186,13 @@
   .tableContainer{
       width: 90%;
     }
-  }
+  
   .tableContainer::-webkit-scrollbar {
     width: 0.75rem; 
   }
-  
+  .link a{
+    font-size: 0.8rem;
+  }
   .tableContainer::-webkit-scrollbar-thumb {
     background-color: #888; 
     border-radius: 0px; /* Half of the width to make it round */
@@ -181,8 +201,9 @@
   .tableContainer::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Color of the scrollbar thumb on hover */
   }
+}
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     .main{
       margin-left: 1rem;
       margin-top: 1rem;
@@ -202,6 +223,10 @@
     }
     .noteText{
       font-size: 0.8em;
+    }
+    .link a{
+      font-size:0.6rem;
+      margin-top:0.2rem;
     }
     .NewSearchBtn{
       font-size: 0.7em;

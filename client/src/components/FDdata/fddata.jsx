@@ -151,7 +151,12 @@ return (
   </tbody>
       </table>
       </div>
-    </div>
+<div className={`${styles.link} ${styles.bankLink}`}>
+  <a href={myMap.get(bank.bank)} target="_blank" rel="noopener noreferrer">
+    Visit {bank.bank} Official term deposit offerings
+  </a>
+</div>
+  </div>
   ))}
 </div>
 </div>
