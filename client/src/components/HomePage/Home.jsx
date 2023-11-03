@@ -158,8 +158,7 @@ const HomePage = () => {
          <div className={styles.note}>
             <p className={styles.noteText}>
             <strong>
-              Disclaimer:    
-              </strong> 
+              Disclaimer: </strong> 
                Information provided on our website is for informational purposes only and based on publicly available data. We strive for accuracy, but we cannot guarantee its completeness. Always verify data before making financial decisions. We are not liable for errors or inaccuracies. Use the platform at your own discretion.
             </p>
           </div>
