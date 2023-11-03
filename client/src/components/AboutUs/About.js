@@ -6,8 +6,9 @@ const AboutUsPage = () => {
         <div className={styles["about-us-container"]}>
             <div className={styles["about-us-content"]}>
                 <h2>About Us</h2>
-                <p>Welcome to our website. We are dedicated to providing high-quality service to our users.</p>
-                <p> The idea for this website was conceived by Professor Manish Kumar Singh, an Economics faculty member at the Indian Institute of Technology, Roorkee. The development of this platform was undertaken by Arunesh Pratap Singh Tomar and Anish Kumar. The vision behind this initiative was to empower the public in making informed decisions regarding the selection of the most suitable fixed deposit schemes offered by various banks. Our mission is to enable individuals to maximize their returns and achieve their financial goals with confidence and security.</p>
+                <p>
+We extend a warm welcome to our website, where our foremost commitment is delivering exceptional service to our esteemed users.</p>
+                <p> Initiated by Professor Manish Kumar Singh, a distinguished member of the Economics faculty at the prestigious Indian Institute of Technology, Roorkee, the concept for this platform was brought to life through by Arunesh Pratap Singh Tomar and Anish Kumar. The vision was to create a resource that empowers individuals to make well-informed decisions regarding the selection of the most suitable fixed deposit schemes offered by a variety of banks. With a core focus on enabling users to optimize their financial returns and realize their aspirations with confidence and reliability, our mission is to foster a secure and knowledgeable financial environment for all.</p>
             </div>
         </div>
     );
