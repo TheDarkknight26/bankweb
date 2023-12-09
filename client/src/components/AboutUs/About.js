@@ -5,10 +5,10 @@ const AboutUsPage = () => {
     return (
         <div className={styles["about-us-container"]}>
             <div className={styles["about-us-content"]}>
-                <h2>About Us</h2>
+                <h2>Welcome to bookFD.in!</h2>
                 <p>
-                We extend a warm welcome to our website, where our foremost commitment is delivering exceptional service to our esteemed users.</p>
-                <p> Initiated by Professor Manish Kumar Singh, a distinguished member of the Economics faculty at the prestigious Indian Institute of Technology, Roorkee, the concept for this platform was brought to life by Arunesh Pratap Singh Tomar and Anish Kumar. The vision was to create a resource that empowers individuals to make well-informed decisions regarding the selection of the most suitable fixed deposit schemes offered by a variety of banks. With a core focus on enabling users to optimize their financial returns and realize their aspirations with confidence and reliability, our mission is to foster a secure and knowledgeable financial environment for all.</p>
+                We seek to help you sail past long and complex fixed deposit quotes of scheduled commercial banks in India. Fixed deposit quotes from commercial banks are often tricky, with ambiguous wordings and irregular grouping of tenures. Our website helps you identify maturities with higher interest rates close to your preferred maturity, enabling you to increase your return marginally without compromising on liquidity. Currently, we cover most scheduled commercial banks in India and are on our way to include all of them shortly.</p>
+                <p>This platform was initiated and conceptualised by Professor Manish Kumar Singh, a member of the faculty at IIT Roorkee. The website was developed and maintained by Arunesh Pratap Singh Tomar and Anish Kumar. </p>
             </div>
         </div>
     );
